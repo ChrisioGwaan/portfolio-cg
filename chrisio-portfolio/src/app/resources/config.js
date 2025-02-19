@@ -42,7 +42,7 @@ const effects = {
 const style = {
     theme:       'light',         // dark | light
     neutral:     'slate',         // sand | gray | slate
-    brand:       'pink',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    brand:       'emerald',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     accent:      'emerald',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'color',     // color | contrast
     solidStyle:  'flat',         // flat | plastic
