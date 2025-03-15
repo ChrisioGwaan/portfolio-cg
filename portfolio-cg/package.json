@@ -1,7 +1,9 @@
 {
   "name": "portfolio-cg",
+  "author": "Weixi Guan (Chrisio Gwaan) <chris322322@gmail.com> (http://www.chrisiogwaan.com/)",
   "private": true,
-  "version": "0.0.0",
+  "License": "MIT",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
