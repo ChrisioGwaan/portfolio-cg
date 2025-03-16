@@ -4,6 +4,7 @@
   "private": true,
   "author": "Weixi (Chrisio) Guan <chris322322@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "test": "jest --passWithNoTests",
