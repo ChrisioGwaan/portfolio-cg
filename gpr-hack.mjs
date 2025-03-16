@@ -6,6 +6,6 @@ const file = readFileSync("./package.json", {
 
 const json = JSON.parse(file);
 
-json.name = "@name/pkgname";
+json.name = "cg-portfolio";
 
 writeFileSync("./package.json", JSON.stringify(json, undefined, 2));
