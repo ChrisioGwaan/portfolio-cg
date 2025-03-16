@@ -31,7 +31,6 @@ jobs:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
           scope: "@name"
-      - run: node gpr-hack.js
       - run: npm ci
       - run: npm run build
       - run: npm publish
