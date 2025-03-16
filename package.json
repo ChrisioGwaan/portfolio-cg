@@ -1,7 +1,6 @@
 {
   "name": "cg-portfolio",
   "version": "0.1.0",
-  "private": true,
   "author": "Weixi (Chrisio) Guan <chris322322@gmail.com>",
   "license": "MIT",
   "publishConfig": {
