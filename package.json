@@ -4,6 +4,9 @@
   "private": true,
   "author": "Weixi (Chrisio) Guan <chris322322@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "next dev",
     "test": "jest --passWithNoTests",
