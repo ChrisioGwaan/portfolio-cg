@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import "../lib/i18n";
+import { useTranslation } from "react-i18next";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -22,6 +23,7 @@ const fadeInAnimationVariants = {
 
 export default function Photography() {
   const { ref } = useSectionInView("photography");
+  const { t } = useTranslation();
 
   return (
     <section
@@ -29,7 +31,7 @@ export default function Photography() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>Photography</SectionHeading>
+      <SectionHeading>{t('Photography')}</SectionHeading>
 
       {/* <div className="flex flex-wrap justify-center gap-4">
         <img src="/image1.jpg" alt="Image 1" className="w-1/5 h-auto" />
