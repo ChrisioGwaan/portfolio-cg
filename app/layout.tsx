@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -8,12 +6,16 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import "../lib/i18n";
+// import "../lib/i18n";
 import LanguageSwitch from "@/components/language-switch";
 
-export { metadata } from "./layout.metadata";
-
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "Weixi (Chrisio) Gwaan | Portfolio",
+  description:
+    "Chrisio is a full-stack software developer with 1 year of experience.",
+};
 
 export default function RootLayout({
   children,

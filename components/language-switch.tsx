@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LuLanguages } from "react-icons/lu";
+import "../lib/i18n";
 
 export default function LanguageSwitch() {
   const { i18n } = useTranslation();

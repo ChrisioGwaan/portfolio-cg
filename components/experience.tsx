@@ -11,6 +11,7 @@ import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { useTranslation } from "react-i18next";
+import "../lib/i18n";
 
 export default function Experience() {
   const { ref } = useSectionInView("experience");

@@ -9,6 +9,7 @@ import { LuMail, LuArrowDown, LuGithub, LuLinkedin } from "react-icons/lu";
 import { useSectionInView } from "@/lib/hooks";
 // import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
+import "../lib/i18n";
 
 export default function Intro() {
   const { t } = useTranslation();
