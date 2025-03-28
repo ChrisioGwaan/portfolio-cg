@@ -68,7 +68,7 @@ export default function Intro() {
         {t("homeSubTitle1")}<span className="font-bold">{t("homeSubTitle2")}</span>{" "}
         {t("homeSubTitle3")}<span className="font-bold">{t("homeSubTitle4")}</span>{" "}
         {t("homeSubTitle5")}<span className="font-bold">{t("homeSubTitle6")}</span>{" "}
-        <span className="underline">{t("homeSubTitle7")}</span>.
+        <span className="underline">{t("homeSubTitle7")}</span>{" "}
       </motion.h1>
 
       <motion.div
