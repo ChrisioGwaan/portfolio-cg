@@ -1,42 +1,67 @@
 {
-  "realname": "Weixi Guan",
+  "realname": "关炜熙",
   "preferredname": "Chrisio Gwaan",
 
   "Home": "主页",
   "home": "主页",
-  "homeTitle": "Hi, I'm Weixi Guan, aka Chrisio Gwaan.",
-  "homeSubTitle1": "I'm a ",
-  "homeSubTitle2": "full-stack software developer",
-  "homeSubTitle3": "with ",
-  "homeSubTitle4": "1+ year ",
-  "homeSubTitle5": "of professional experience. I enjoy building ",
-  "homeSubTitle6": "sites & apps. My focus is ",
-  "homeSubTitle7": "Spring Boot with Java.",
+  "homeTitle": "Hi，我是关炜熙，我的英文名字是Chrisio Gwaan。",
+  "homeSubTitle1": "我是一名",
+  "homeSubTitle2": "全栈软件工程师。",
+  "homeSubTitle3": "我现在拥有 ",
+  "homeSubTitle4": "1年以上",
+  "homeSubTitle5": "的专业经验。我喜欢构建",
+  "homeSubTitle6": "网站和应用程序。我的技术重点是",
+  "homeSubTitle7": "使用Spring Boot和Java。",
   "homeCV": "CV",
-  "homeCVDownload": "Download my resume",
-  "homeLinkedin": "My LinkedIn Profile",
-  "homeGitHub": "My GitHub Profile",
-  "homeEmailContact": "Contact me via email",
-  "homeLanguage1": "English",
-  "homeLanguage2": "Cantonese",
-  "homeLanguage3": "Mandarin",
+  "homeCVDownload": "下载我的专业简历",
+  "homeLinkedin": "我的LinkedIn个人资料",
+  "homeGitHub": "我的GitHub个人资料",
+  "homeEmailContact": "通过电子邮件与我联系",
+  "homeLanguage1": "英语",
+  "homeLanguage2": "粤语",
+  "homeLanguage3": "普通话",
 
-  "About": "About",
-  "about": "About",
-  "aboutTitle": "About Me",
-  "aboutDescription1": "Software Engineer with experience in designing, monitoring, operating, and maintaining software systems tailored to diverse business requirements. My expertise lies particularly in developing secure and efficient microservices, leveraging cloud native solutions, and orchestrating streamlined project workflows through Jenkins CI/CD pipelines.",
-  "aboutDescription2": "Recently, I have been expanding my skillset by integrating advanced and trending AI models into software solutions, enhancing user interaction and system capabilities through pioneering technologies.",
-  "aboutDescription3": "Outside of work, my curiosity drives me toward mathematical research, riding adventures, and delving deep into historical documentary. I believe in a growth mindset, continually seeking challenges and opportunities for learning, both in and out of the workplace. Dedication and curiosity are central to my philosophy, applying my approach to all aspects of life.",
+  "About": "关于",
+  "about": "关于",
+  "aboutTitle": "个人语录",
+  "aboutDescription1": "欢迎来到我的个人网站，我在这里做一个简单的自我介绍。我是一名来自中国广州的软件工程师，同时也是一名编程爱好者。我具备设计、监控、运营和维护多样化业务需求的软件系统的经验。擅长开发安全高效的微服务架构，灵活运用云原生解决方案，并通过 Jenkins CI/CD 流水线优化项目开发与部署流程，提升系统的模块化、可持续性和可扩展性。",
+  "aboutDescription2": "最近我不断通过各种线上资源和平台拓展自身技能，将先进且流行的 AI 模型融入现有的软件解决方案，包括我自己开发的一些项目，例如SaaS管理操作平台等，借助前沿技术提升用户交互体验和系统能力。",
+  "aboutDescription3": "除了工作以为的生活，我喜欢研究数学相关的理论、机车骑行探索以及探究一些历史事迹和不同国家的文化特色。我始终秉持成长型思维，持续在工作和生活中追求挑战与学习机会。专注、持之以恒与好奇心是我人生的核心信念，我也将其贯彻到生活的方方面面。如果有兴趣，欢迎随时与我联系！",
 
-  "Experience": "Experience",
-  "experience": "Experience",
+  "Experience": "学历与工作经历",
+  "experience": "学历与工作经历",
+  "experience1": {
+    "title": "软件开发实习生",
+    "location": "Total Game Development",
+    "description": "用 C++ 为开源游戏《War Of Salvation》开发新的功能和游戏单位。同时修复 Ship 单位中多个指针相关及内存泄漏问题。"
+  },
+  "experience2": {
+    "title": "软件工程学学士（本科)",
+    "location": "墨尔本皇家理工大学 - RMIT University",
+    "description": ""
+  },
+  "experience3": {
+    "title": "后端开发工程师",
+    "location": "ABC Academy of Music",
+    "description": "基于 Java，使用 Spring Boot 和 JPA 设计并实现微服务架构，显著提升后端的模块化与可扩展性。搭建 Jenkins CI/CD 流水线，优化部署流程，显著减少系统停机时间。通过敏捷开发（Agile Sprint）修复30多个功能性、逻辑性及安全性问题，保障系统稳定与高性能运行。"
+  },
+  "experience4": {
+    "title": "软件工程实习生",
+    "location": "广东建科创新技术研究院有限公司",
+    "description": "基于 Spring Boot 和 Vue.js 开发客户关系管理（CRM）系统，为客户提供高效管理数据、交互和业务活动的平台，显著提升客户服务质量。"
+  },
+  "experience5": {
+    "title": "预科学习 - 科学工程与健康基础",
+    "location": "墨尔本皇家理工大学 - RMIT University",
+    "description": ""
+  },
 
-  "Projects": "Projects",
-  "projects": "Projects",
+  "Projects": "项目经历",
+  "projects": "项目经历",
 
-  "Skills": "Skills",
-  "skills": "Skills",
+  "Skills": "技能",
+  "skills": "技能",
 
-  "Photography": "Photography",
-  "photography": "Photography"
+  "Photography": "分享图片库",
+  "photography": "分享图片库"
 }
