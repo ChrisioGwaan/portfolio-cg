@@ -8,9 +8,11 @@ import { motion } from "framer-motion";
 import { LuMail, LuArrowDown, LuGithub, LuLinkedin } from "react-icons/lu";
 import { useSectionInView } from "@/lib/hooks";
 // import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTranslation } from "react-i18next";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { t } = useTranslation();
+  const { ref } = useSectionInView("home", 0.5);
   // const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -60,13 +62,12 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">
-          Hi, I'm Weixi Guan, aka Chrisio Gwaan.
+          {t("homeTitle")}
         </span>{" "}
-        I'm a <span className="font-bold">full-stack software developer</span>{" "}
-        with <span className="font-bold">1 year</span> of professional
-        experience. I enjoy building{" "}
-        <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">Spring Boot with Java</span>.
+        {t("homeSubTitle1")}<span className="font-bold">{t("homeSubTitle2")}</span>{" "}
+        {t("homeSubTitle3")}<span className="font-bold">{t("homeSubTitle4")}</span>{" "}
+        {t("homeSubTitle5")}<span className="font-bold">{t("homeSubTitle6")}</span>{" "}
+        <span className="underline">{t("homeSubTitle7")}</span>.
       </motion.h1>
 
       <motion.div
@@ -92,9 +93,10 @@ export default function Intro() {
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="/CV.pdf"
+          title={t("homeCVDownload")}
           download
         >
-          CV{" "}
+          {t("homeCV")}{" "}
           <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
@@ -102,6 +104,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/weixi-guan"
           target="_blank"
+          title={t("homeLinkedin")}
         >
           <LuLinkedin />
         </a>
@@ -110,6 +113,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/ChrisioGwaan"
           target="_blank"
+          title={t("homeGitHub")}
         >
           <LuGithub />
         </a>
@@ -118,6 +122,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="mailto:chris322322@gmail.com"
           target="_blank"
+          title={t("homeEmailContact")}
         >
           <LuMail />
         </a>
@@ -136,7 +141,7 @@ export default function Intro() {
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
-          English
+          {t("homeLanguage1")}
         </a>
 
         <br />
@@ -144,7 +149,7 @@ export default function Intro() {
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
-          Cantonese
+          {t("homeLanguage2")}
         </a>
 
         <br />
@@ -152,7 +157,7 @@ export default function Intro() {
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
-          Mandarin
+          {t("homeLanguage3")}
         </a>
       </motion.div>
     </section>
