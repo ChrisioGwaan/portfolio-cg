@@ -1,42 +1,67 @@
 {
-  "realname": "Weixi Guan",
+  "realname": "關煒熙",
   "preferredname": "Chrisio Gwaan",
 
-  "Home": "主页",
-  "home": "主页",
-  "homeTitle": "Hi, I'm Weixi Guan, aka Chrisio Gwaan.",
-  "homeSubTitle1": "I'm a ",
-  "homeSubTitle2": "full-stack software developer",
-  "homeSubTitle3": "with ",
-  "homeSubTitle4": "1+ year ",
-  "homeSubTitle5": "of professional experience. I enjoy building ",
-  "homeSubTitle6": "sites & apps. My focus is ",
-  "homeSubTitle7": "Spring Boot with Java.",
-  "homeCV": "CV",
-  "homeCVDownload": "Download my resume",
-  "homeLinkedin": "My LinkedIn Profile",
-  "homeGitHub": "My GitHub Profile",
-  "homeEmailContact": "Contact me via email",
-  "homeLanguage1": "English",
-  "homeLanguage2": "Cantonese",
-  "homeLanguage3": "Mandarin",
+  "Home": "主頁",
+  "home": "主頁",
+  "homeTitle": "Hi，我係關煒熙，我嘅英文名叫Chrisio Gwaan。",
+  "homeSubTitle1": "我係一名",
+  "homeSubTitle2": "全端軟件工程師。",
+  "homeSubTitle3": "目前擁有",
+  "homeSubTitle4": "超過1年",
+  "homeSubTitle5": "嘅專業經驗。我鍾意開發",
+  "homeSubTitle6": "網站同應用程式。專注於",
+  "homeSubTitle7": "使用 Spring Boot 同 Java。",
+  "homeCV": "履歷",
+  "homeCVDownload": "下載我嘅專業履歷",
+  "homeLinkedin": "我嘅 LinkedIn 個人檔案",
+  "homeGitHub": "我嘅 GitHub 個人檔案",
+  "homeEmailContact": "用電郵聯絡我",
+  "homeLanguage1": "英文",
+  "homeLanguage2": "廣東話",
+  "homeLanguage3": "普通話",
 
-  "About": "About",
-  "about": "About",
-  "aboutTitle": "About Me",
-  "aboutDescription1": "Software Engineer with experience in designing, monitoring, operating, and maintaining software systems tailored to diverse business requirements. My expertise lies particularly in developing secure and efficient microservices, leveraging cloud native solutions, and orchestrating streamlined project workflows through Jenkins CI/CD pipelines.",
-  "aboutDescription2": "Recently, I have been expanding my skillset by integrating advanced and trending AI models into software solutions, enhancing user interaction and system capabilities through pioneering technologies.",
-  "aboutDescription3": "Outside of work, my curiosity drives me toward mathematical research, riding adventures, and delving deep into historical documentary. I believe in a growth mindset, continually seeking challenges and opportunities for learning, both in and out of the workplace. Dedication and curiosity are central to my philosophy, applying my approach to all aspects of life.",
+  "About": "關於",
+  "about": "關於",
+  "aboutTitle": "個人簡介",
+  "aboutDescription1": "歡迎嚟到我個人網站，簡單介紹下自己。我係嚟自中國廣州嘅軟件工程師，同時都係編程愛好者。擁有設計、監控、營運同維護多元化業務需求嘅軟件系統經驗。專長於開發安全高效嘅微服務架構，靈活應用雲原生解決方案，並透過 Jenkins CI/CD 流水線優化項目開發同部署流程，提升系統嘅模組化、可持續性同可擴展性。",
+  "aboutDescription2": "最近我透過唔同線上資源同平台不斷拓展自己技能，將先進同熱門嘅 AI 模型應用喺現有嘅軟件解決方案上，包括我自家開發嘅 SaaS 管理平台等，利用前沿技術提升用戶互動體驗同系統能力。",
+  "aboutDescription3": "除咗工作，我都鍾意鑽研數學理論、玩電單車環遊同發掘歷史紀錄片同唔同國家嘅文化。我一直秉持住成長型思維，持續喺工作同生活中尋求挑戰同學習機會。專注、堅持同好奇心係我人生核心信念，並應用喺生活各方面。如果有興趣，歡迎隨時聯絡我！",
 
-  "Experience": "Experience",
-  "experience": "Experience",
+  "Experience": "學歷同工作經驗",
+  "experience": "學歷同工作經驗",
+  "experience1": {
+    "title": "軟件開發實習生",
+    "location": "Total Game Development",
+    "description": "用 C++ 為開源遊戲《War Of Salvation》開發新功能同遊戲單位，同時修復 Ship 單位中多個指針相關同記憶體洩漏問題。"
+  },
+  "experience2": {
+    "title": "軟件工程學學士（本科）",
+    "location": "墨爾本皇家理工大學 - RMIT University",
+    "description": ""
+  },
+  "experience3": {
+    "title": "後端開發工程師",
+    "location": "ABC Academy of Music",
+    "description": "基於 Java，使用 Spring Boot 同 JPA 設計同實現微服務架構，顯著提升後端模組化同可擴展性。搭建 Jenkins CI/CD 流水線，優化部署流程，大幅減少系統停機時間。透過敏捷開發（Agile Sprint）修復超過30個功能、邏輯同安全問題，確保系統穩定同高效運行。"
+  },
+  "experience4": {
+    "title": "軟件工程實習生",
+    "location": "廣東建科創新技術研究院有限公司",
+    "description": "基於 Spring Boot 同 Vue.js 開發客戶關係管理（CRM）系統，為客戶提供高效管理數據、互動同業務活動嘅平台，顯著提升客戶服務質素。"
+  },
+  "experience5": {
+    "title": "基礎課程 - 科學、工程與健康基礎",
+    "location": "墨爾本皇家理工大學 - RMIT University",
+    "description": ""
+  },
 
-  "Projects": "Projects",
-  "projects": "Projects",
+  "Projects": "項目經驗",
+  "projects": "項目經驗",
 
-  "Skills": "Skills",
-  "skills": "Skills",
+  "Skills": "技能",
+  "skills": "技能",
 
-  "Photography": "Photography",
-  "photography": "Photography"
+  "Photography": "分享相簿",
+  "photography": "分享相簿"
 }
