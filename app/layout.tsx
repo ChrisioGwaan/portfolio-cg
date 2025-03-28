@@ -11,13 +11,9 @@ import { Toaster } from "react-hot-toast";
 import "../lib/i18n";
 import LanguageSwitch from "@/components/language-switch";
 
-const inter = Inter({ subsets: ["latin"] });
+export { metadata } from "./layout.metadata";
 
-export const metadata = {
-  title: "Weixi (Chrisio) Gwaan | Portfolio",
-  description:
-    "Chrisio is a full-stack software developer with 1 year of experience.",
-};
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
