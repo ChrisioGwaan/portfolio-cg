@@ -4,9 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("about");
+  const { t } = useTranslation();
 
   return (
     <motion.section
@@ -17,33 +19,21 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>{t("aboutTitle")}</SectionHeading>
       <p>
-        Software Engineer with experience in designing, monitoring, operating,
-        and maintaining software systems tailored to diverse business
-        requirements. My expertise lies particularly in developing secure and
-        efficient microservices, leveraging cloud native solutions, and
-        orchestrating streamlined project workflows through Jenkins CI/CD
-        pipelines.
+        {t("aboutDescription1")}
       </p>
 
       <br />
 
       <p>
-        Recently, I have been expanding my skillset by integrating advanced and
-        trending AI models into software solutions, enhancing user interaction
-        and system capabilities through pioneering technologies.
+      {t("aboutDescription2")}
       </p>
 
       <br />
 
       <p>
-        Outside of work, my curiosity drives me toward mathematical research,
-        riding adventures, and delving deep into historical documentary. I
-        believe in a growth mindset, continually seeking challenges and
-        opportunities for learning, both in and out of the workplace. Dedication
-        and curiosity are central to my philosophy, applying my approach to all
-        aspects of life.
+        {t("aboutDescription3")}
       </p>
     </motion.section>
   );

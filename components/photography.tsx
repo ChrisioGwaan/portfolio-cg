@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Photography() {
-  const { ref } = useSectionInView("Photography");
+  const { ref } = useSectionInView("photography");
 
   return (
     <section
