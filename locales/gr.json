@@ -2,41 +2,66 @@
   "realname": "Weixi Guan",
   "preferredname": "Chrisio Gwaan",
 
-  "Home": "主页",
-  "home": "主页",
-  "homeTitle": "Hi, I'm Weixi Guan, aka Chrisio Gwaan.",
-  "homeSubTitle1": "I'm a ",
-  "homeSubTitle2": "full-stack software developer",
-  "homeSubTitle3": "with ",
-  "homeSubTitle4": "1+ year ",
-  "homeSubTitle5": "of professional experience. I enjoy building ",
-  "homeSubTitle6": "sites & apps. My focus is ",
-  "homeSubTitle7": "Spring Boot with Java.",
-  "homeCV": "CV",
-  "homeCVDownload": "Download my resume",
-  "homeLinkedin": "My LinkedIn Profile",
-  "homeGitHub": "My GitHub Profile",
-  "homeEmailContact": "Contact me via email",
-  "homeLanguage1": "English",
-  "homeLanguage2": "Cantonese",
-  "homeLanguage3": "Mandarin",
+  "Home": "Αρχική",
+  "home": "Αρχική",
+  "homeTitle": "Γεια σου, είμαι ο Weixi Guan, γνωστός και ως Chrisio Gwaan.",
+  "homeSubTitle1": "Είμαι ",
+  "homeSubTitle2": "full-stack προγραμματιστής λογισμικού",
+  "homeSubTitle3": "με ",
+  "homeSubTitle4": "1+ χρόνο ",
+  "homeSubTitle5": "επαγγελματικής εμπειρίας. Απολαμβάνω την κατασκευή ",
+  "homeSubTitle6": "ιστοσελίδων και εφαρμογών. Η εστίασή μου είναι ",
+  "homeSubTitle7": "Spring Boot με Java.",
+  "homeCV": "Περίληψη",
+  "homeCVDownload": "Κατεβάστε το βιογραφικό μου",
+  "homeLinkedin": "Το προφίλ μου στο LinkedIn",
+  "homeGitHub": "Το προφίλ μου στο GitHub",
+  "homeEmailContact": "Επικοινωνήστε μαζί μου μέσω email",
+  "homeLanguage1": "Αγγλικά",
+  "homeLanguage2": "Καντονέζικα",
+  "homeLanguage3": "Μανδαρινικά",
 
-  "About": "About",
-  "about": "About",
-  "aboutTitle": "About Me",
-  "aboutDescription1": "Software Engineer with experience in designing, monitoring, operating, and maintaining software systems tailored to diverse business requirements. My expertise lies particularly in developing secure and efficient microservices, leveraging cloud native solutions, and orchestrating streamlined project workflows through Jenkins CI/CD pipelines.",
-  "aboutDescription2": "Recently, I have been expanding my skillset by integrating advanced and trending AI models into software solutions, enhancing user interaction and system capabilities through pioneering technologies.",
-  "aboutDescription3": "Outside of work, my curiosity drives me toward mathematical research, riding adventures, and delving deep into historical documentary. I believe in a growth mindset, continually seeking challenges and opportunities for learning, both in and out of the workplace. Dedication and curiosity are central to my philosophy, applying my approach to all aspects of life.",
+  "About": "Σχετικά",
+  "about": "Σχετικά",
+  "aboutTitle": "Σχετικά με μένα",
+  "aboutDescription1": "Είμαι Μηχανικός Λογισμικού με εμπειρία στον σχεδιασμό, την παρακολούθηση και τη διαχείριση συστημάτων λογισμικού, προσαρμοσμένων σε ποικίλες επιχειρησιακές ανάγκες. Εξειδικεύομαι στην ανάπτυξη ασφαλών και αποδοτικών microservices, στην αξιοποίηση cloud native τεχνολογιών και στη βελτιστοποίηση των διαδικασιών ανάπτυξης μέσω Jenkins CI/CD pipelines.",
+  "aboutDescription2": "Τον τελευταίο καιρό επεκτείνω τις δεξιότητές μου ενσωματώνοντας προηγμένα και σύγχρονα AI μοντέλα σε λύσεις λογισμικού, ενισχύοντας την αλληλεπίδραση με τον χρήστη και τις δυνατότητες των συστημάτων μέσω καινοτόμων τεχνολογιών.",
+  "aboutDescription3": "Εκτός εργασίας, η περιέργειά μου με οδηγεί στην ενασχόληση με τη μαθηματική έρευνα, τις περιπετειώδεις διαδρομές και την εξερεύνηση ιστορικών ντοκιμαντέρ. Πιστεύω στη νοοτροπία ανάπτυξης, αναζητώντας διαρκώς προκλήσεις και ευκαιρίες για μάθηση, τόσο στον επαγγελματικό όσο και στον προσωπικό τομέα. Η αφοσίωση και η περιέργεια αποτελούν βασικές αρχές στη ζωή μου και τις εφαρμόζω σε κάθε πτυχή της καθημερινότητας.",
 
-  "Experience": "Experience",
-  "experience": "Experience",
+  "Experience": "Εμπειρία",
+  "experience": "Εμπειρία",
+  "experience1": {
+    "title": "Intern Εξέλιξης Λογισμικού",
+    "location": "Total Game Development",
+    "description": "Ανάπτυξη νέων λειτουργιών για το open-source παιχνίδι War Of Salvation σε C++. Διόρθωση διαφόρων σφαλμάτων που σχετίζονται με pointers και διαρροές μνήμης στις μονάδες τύπου Ship."
+  },
+  "experience2": {
+    "title": "Πτυχίο Μηχανικής Λογισμικού",
+    "location": "Royal Melbourne Institute of Technology (RMIT) University",
+    "description": ""
+  },
+  "experience3": {
+    "title": "Προγραμματιστής Back End",
+    "location": "ABC Academy of Music",
+    "description": "Σχεδίασα αρχιτεκτονική microservices βασισμένη σε Java με χρήση Spring Boot και JPA, βελτιώνοντας τη δομική αρθρωτότητα και την επεκτασιμότητα του backend. Δημιούργησα Jenkins CI/CD pipelines, επιταχύνοντας τις διαδικασίες ανάπτυξης και μειώνοντας σημαντικά τον χρόνο διακοπής λειτουργίας. Αντιμετώπισα περισσότερα από 30 λειτουργικά, λογικά και ζητήματα ασφαλείας μέσω Agile sprints, διασφαλίζοντας την αξιόπιστη απόδοση της εφαρμογής."
+  },
+  "experience4": {
+    "title": "Intern Μηχανικός Λογισμικού",
+    "location": "Guangdong Provincial Academy of Building Research Group Co.Ltd",
+    "description": "Ανέπτυξα σύστημα διαχείρισης πελατειακών σχέσεων (CRM) με backend σε Spring Boot και frontend σε Vue.js, προσφέροντας στους πελάτες μια πλατφόρμα για αποτελεσματική διαχείριση δεδομένων, αλληλεπιδράσεων και δραστηριοτήτων, βελτιώνοντας σημαντικά την εξυπηρέτηση πελατών."
+  },
+  "experience5": {
+    "title": "Foundation Study in Science Engineering and Health",
+    "location": "Royal Melbourne Institute of Technology (RMIT) University",
+    "description": ""
+  },
 
-  "Projects": "Projects",
-  "projects": "Projects",
+  "Projects": "Έργα",
+  "projects": "Έργα",
 
-  "Skills": "Skills",
-  "skills": "Skills",
+  "Skills": "Δεξιότητες",
+  "skills": "Δεξιότητες",
 
-  "Photography": "Photography",
-  "photography": "Photography"
+  "Photography": "Φωτογραφία",
+  "photography": "Φωτογραφία"
 }
