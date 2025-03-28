@@ -1,0 +1,42 @@
+{
+  "realname": "Weixi Guan",
+  "preferredname": "Chrisio Gwaan",
+
+  "Home": "主页",
+  "home": "主页",
+  "homeTitle": "Hi, I'm Weixi Guan, aka Chrisio Gwaan.",
+  "homeSubTitle1": "I'm a ",
+  "homeSubTitle2": "full-stack software developer",
+  "homeSubTitle3": "with ",
+  "homeSubTitle4": "1+ year ",
+  "homeSubTitle5": "of professional experience. I enjoy building ",
+  "homeSubTitle6": "sites & apps. My focus is ",
+  "homeSubTitle7": "Spring Boot with Java.",
+  "homeCV": "CV",
+  "homeCVDownload": "Download my resume",
+  "homeLinkedin": "My LinkedIn Profile",
+  "homeGitHub": "My GitHub Profile",
+  "homeEmailContact": "Contact me via email",
+  "homeLanguage1": "English",
+  "homeLanguage2": "Cantonese",
+  "homeLanguage3": "Mandarin",
+
+  "About": "About",
+  "about": "About",
+  "aboutTitle": "About Me",
+  "aboutDescription1": "Software Engineer with experience in designing, monitoring, operating, and maintaining software systems tailored to diverse business requirements. My expertise lies particularly in developing secure and efficient microservices, leveraging cloud native solutions, and orchestrating streamlined project workflows through Jenkins CI/CD pipelines.",
+  "aboutDescription2": "Recently, I have been expanding my skillset by integrating advanced and trending AI models into software solutions, enhancing user interaction and system capabilities through pioneering technologies.",
+  "aboutDescription3": "Outside of work, my curiosity drives me toward mathematical research, riding adventures, and delving deep into historical documentary. I believe in a growth mindset, continually seeking challenges and opportunities for learning, both in and out of the workplace. Dedication and curiosity are central to my philosophy, applying my approach to all aspects of life.",
+
+  "Experience": "Experience",
+  "experience": "Experience",
+
+  "Projects": "Projects",
+  "projects": "Projects",
+
+  "Skills": "Skills",
+  "skills": "Skills",
+
+  "Photography": "Photography",
+  "photography": "Photography"
+}
