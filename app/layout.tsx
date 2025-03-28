@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -6,6 +8,8 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import "../lib/i18n";
+import LanguageSwitch from "@/components/language-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +39,10 @@ export default function RootLayout({
             <Footer />
 
             <Toaster position="top-right" />
-            <ThemeSwitch />
+            <div className="fixed bottom-5 right-5 flex gap-3">
+              <LanguageSwitch />
+              <ThemeSwitch />
+            </div>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
