@@ -1,29 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "../lib/i18n";
 import { useTranslation } from "react-i18next";
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
+  hidden: { opacity: 0, y: 30 },
+  visible: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
+    transition: { delay: 0.1 * index },
   }),
 };
+
+const images = [
+  { src: "/images/20250310_153650.jpg", alt: "Image 1" },
+  { src: "/images/20250320_193222.jpg", alt: "Image 2" },
+];
 
 export default function Photography() {
   const { ref } = useSectionInView("photography");
   const { t } = useTranslation();
+  const [previewSrc, setPreviewSrc] = useState<string | null>(null);
 
   return (
     <section
@@ -31,18 +32,46 @@ export default function Photography() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>{t('Photography')}</SectionHeading>
+      <SectionHeading>{t("Photography")}</SectionHeading>
 
-      {/* <div className="flex flex-wrap justify-center gap-4">
-        <img src="/image1.jpg" alt="Image 1" className="w-1/5 h-auto" />
-        <img src="/image2.jpg" alt="Image 2" className="w-1/5 h-auto" />
-        <img src="/image3.jpg" alt="Image 3" className="w-1/5 h-auto" />
-        <img src="/image4.jpg" alt="Image 4" className="w-1/5 h-auto" />
-        <img src="/image5.jpg" alt="Image 5" className="w-1/5 h-auto" />
-      </div> */}
+      <div className="flex flex-wrap justify-center gap-4">
+        {images.map((img, index) => (
+          <motion.img
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
+            className="w-2/5 h-auto cursor-pointer rounded-lg shadow-md hover:scale-105 transition"
+            custom={index}
+            variants={fadeInAnimationVariants}
+            initial="hidden"
+            animate="visible"
+            onClick={() => setPreviewSrc(img.src)}
+          />
+        ))}
+      </div>
 
-      <p>Coming soon ...</p>
-
+      {/* Image Preview Overlay */}
+      <AnimatePresence>
+        {previewSrc && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPreviewSrc(null)}
+          >
+            <motion.img
+              src={previewSrc}
+              alt="Preview"
+              className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
