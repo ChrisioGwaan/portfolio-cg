@@ -14,10 +14,6 @@ Click [here](https://nodejs.org/en) to download and install.
 
 Change to project directory on console
 
-```
-cd <your_directory>/<each_project_dir>
-```
-
 ### Dependency installation
 
 ```
