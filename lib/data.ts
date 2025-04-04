@@ -107,25 +107,26 @@ export const projectsData = [
     tags: ["Spring Boot", "MyBatis", "Vue.js", "MySQL", "MongoDB", "ElementUI"],
     imageUrl: rmtdevImg,
   },
-  // {
-  //   title: "Word Analytics",
-  //   description:
-  //     "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-  //   tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-  //   imageUrl: wordanalyticsImg,
-  // },
 ] as const;
 
 export const skillsData = [
-  "Spring Boot",
   "Java",
-  "C++",
+  "C/C++",
   "Python",
+  "HTML",
+  "CSS",
   "JavaScript",
   "TypeScript",
+  "Spring Boot",
+  "MyBatis",
   "Vue.js",
-  "React",
+  "React.js",
   "Next.js",
+  "Express.js",
   "Node.js",
+  "Flask",
+  "Django",
   "AWS",
+  "Docker",
+  "Jenkins",
 ] as const;
