@@ -49,7 +49,7 @@ export const experiencesData = [
     description:
       "Develop new features for the open source game War Of Salvation in C++. Fix sereral bugs in pointers and memory leaks for the Ship units.",
     icon: React.createElement(CgWorkAlt),
-    date: "2024 DEC - 2025 Present",
+    date: "2024 DEC - 2025 MAR",
   },
   {
     id: "experience2",
