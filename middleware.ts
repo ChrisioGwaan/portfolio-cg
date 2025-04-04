@@ -1,14 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const country = request.geo?.country || 'US';
-  const host = request.headers.get('host');
+  const country = request.geo?.country || 'AU';
+  const host = request.headers.get('host') || '';
 
-  const isMainlandChina = country === 'CN';
-  const isCom = host?.endsWith("chrisiogwaan.com");
+  const isFromChina = country === 'CN';
+  const isCom = host.endsWith('chrisiogwaan.com');
+  const isComCn = host.endsWith('chrisiogwaan.com.cn');
 
-  if (isMainlandChina && isCom) {
-    return NextResponse.redirect("https://www.chrisiogwaan.com.cn");
+  if (isFromChina && isCom) {
+    return NextResponse.redirect('https://www.chrisiogwaan.com.cn');
+  }
+
+  if (!isFromChina && isComCn) {
+    return NextResponse.redirect('https://www.chrisiogwaan.com');
   }
 
   return NextResponse.next();
