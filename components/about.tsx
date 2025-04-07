@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useTranslation } from "react-i18next";
 import "../lib/i18n";
+import ScrambleText from "./scramble-text";
 
 export default function About() {
   const { ref } = useSectionInView("about");
@@ -22,19 +23,19 @@ export default function About() {
     >
       <SectionHeading>{t("aboutTitle")}</SectionHeading>
       <p>
-        {t("aboutDescription1")}
+        <ScrambleText text={t("aboutDescription1")} />
       </p>
 
       <br />
 
       <p>
-      {t("aboutDescription2")}
+        <ScrambleText text={t("aboutDescription2")} />
       </p>
 
       <br />
 
       <p>
-        {t("aboutDescription3")}
+        <ScrambleText text={t("aboutDescription3")} />
       </p>
     </motion.section>
   );
