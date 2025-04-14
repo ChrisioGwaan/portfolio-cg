@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-import "../lib/i18n";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import SectionHeading from './section-heading';
+import { skillsData } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
+import { motion } from 'framer-motion';
+import '../lib/i18n';
+import { useTranslation } from 'react-i18next';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -23,7 +23,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
-  const { ref } = useSectionInView("skills");
+  const { ref } = useSectionInView('skills');
   const { t } = useTranslation();
 
   return (
@@ -32,7 +32,7 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>{t("Skills")}</SectionHeading>
+      <SectionHeading>{t('Skills')}</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useScramble } from "use-scramble";
+import React from 'react';
+import { useScramble } from 'use-scramble';
 
 export default function ScrambleText({ text }: { text: string }) {
   const { ref, replay } = useScramble({

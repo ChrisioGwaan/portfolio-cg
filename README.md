@@ -41,6 +41,7 @@ This project is licensed under the MIT. This means that you are free to use, mod
 ### Usage and Restrictions
 
 The intent of this license is to allow for the free use of this project for educational, research, and personal projects. However, please adhere to the following guidelines:
+
 - **Academic Integrity**: This project should not be used for purposes that violate academic integrity policies of educational institutions.
 - **Commercial Use**: If you intend to use this project for commercial purposes, please check the specific terms of the license or contact the authors.
 - **Liability**: The authors are not responsible for any damages or issues arising from the use of this project.

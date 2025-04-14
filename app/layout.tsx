@@ -1,27 +1,22 @@
-import Header from "@/components/header";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
+import Header from '@/components/header';
+import './globals.css';
+import { Inter } from 'next/font/google';
+import ActiveSectionContextProvider from '@/context/active-section-context';
+import Footer from '@/components/footer';
+import ThemeSwitch from '@/components/theme-switch';
+import ThemeContextProvider from '@/context/theme-context';
+import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
-import LanguageSwitch from "@/components/language-switch";
+import LanguageSwitch from '@/components/language-switch';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Weixi (Chrisio) Gwaan | Portfolio",
-  description:
-    "Chrisio is a full-stack software developer with 1 year of experience.",
+  title: 'Weixi (Chrisio) Gwaan | Portfolio',
+  description: 'Chrisio is a full-stack software developer with 1 year of experience.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="!scroll-smooth">
       <body

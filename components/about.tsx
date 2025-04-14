@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
-import { useTranslation } from "react-i18next";
-import "../lib/i18n";
-import ScrambleText from "./scramble-text";
+import React from 'react';
+import SectionHeading from './section-heading';
+import { motion } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
+import { useTranslation } from 'react-i18next';
+import '../lib/i18n';
+import ScrambleText from './scramble-text';
 
 export default function About() {
-  const { ref } = useSectionInView("about");
+  const { ref } = useSectionInView('about');
   const { t } = useTranslation();
 
   return (
@@ -21,21 +21,21 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>{t("aboutTitle")}</SectionHeading>
+      <SectionHeading>{t('aboutTitle')}</SectionHeading>
       <p>
-        <ScrambleText text={t("aboutDescription1")} />
+        <ScrambleText text={t('aboutDescription1')} />
       </p>
 
       <br />
 
       <p>
-        <ScrambleText text={t("aboutDescription2")} />
+        <ScrambleText text={t('aboutDescription2')} />
       </p>
 
       <br />
 
       <p>
-        <ScrambleText text={t("aboutDescription3")} />
+        <ScrambleText text={t('aboutDescription3')} />
       </p>
     </motion.section>
   );

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import SectionHeading from "./section-heading";
-import { useSectionInView } from "@/lib/hooks";
-import { motion, AnimatePresence } from "framer-motion";
-import "../lib/i18n";
-import { useTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import SectionHeading from './section-heading';
+import { useSectionInView } from '@/lib/hooks';
+import { motion, AnimatePresence } from 'framer-motion';
+import '../lib/i18n';
+import { useTranslation } from 'react-i18next';
 
 const fadeInAnimationVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -17,12 +17,12 @@ const fadeInAnimationVariants = {
 };
 
 const images = [
-  { src: "/images/20250310_153650.jpg", alt: "Image 1" },
-  { src: "/images/20250320_193222.jpg", alt: "Image 2" },
+  { src: '/images/20250310_153650.jpg', alt: 'Image 1' },
+  { src: '/images/20250320_193222.jpg', alt: 'Image 2' },
 ];
 
 export default function Photography() {
-  const { ref } = useSectionInView("photography");
+  const { ref } = useSectionInView('photography');
   const { t } = useTranslation();
   const [previewSrc, setPreviewSrc] = useState<string | null>(null);
 
@@ -32,7 +32,7 @@ export default function Photography() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>{t("Photography")}</SectionHeading>
+      <SectionHeading>{t('Photography')}</SectionHeading>
 
       <div className="flex flex-wrap justify-center gap-4">
         {images.map((img, index) => (
@@ -67,7 +67,7 @@ export default function Photography() {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={e => e.stopPropagation()}
             />
           </motion.div>
         )}

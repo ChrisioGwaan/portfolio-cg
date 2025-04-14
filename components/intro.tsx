@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
-import { LuMail, LuArrowDown, LuGithub, LuLinkedin } from "react-icons/lu";
-import { useSectionInView } from "@/lib/hooks";
-import { useTranslation } from "react-i18next";
-import "../lib/i18n";
-import i18next from "i18next";
+import Image from 'next/image';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { LuMail, LuArrowDown, LuGithub, LuLinkedin } from 'react-icons/lu';
+import { useSectionInView } from '@/lib/hooks';
+import { useTranslation } from 'react-i18next';
+import '../lib/i18n';
+import i18next from 'i18next';
 
 interface SocialLinkProps {
   href: string;
@@ -40,15 +40,14 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label 
     title={title}
     download
   >
-    {label}{" "}
-    <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
+    {label} <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
   </a>
 );
 
 // Main Intro component
 export default function Intro() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView("home", 0.5);
+  const { ref } = useSectionInView('home', 0.5);
 
   return (
     <section
@@ -63,7 +62,7 @@ export default function Intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -83,7 +82,7 @@ export default function Intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
+              type: 'spring',
               stiffness: 125,
               delay: 0.1,
               duration: 0.7,
@@ -97,13 +96,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{t("homeTitle")}</span> {t("homeSubTitle1")}
-        <span className="font-bold">{t("homeSubTitle2")}</span>{" "}
-        {t("homeSubTitle3")}
-        <span className="font-bold">{t("homeSubTitle4")}</span>{" "}
-        {t("homeSubTitle5")}
-        <span className="font-bold">{t("homeSubTitle6")}</span>{" "}
-        <span className="underline">{t("homeSubTitle7")}</span>{" "}
+        <span className="font-bold">{t('homeTitle')}</span> {t('homeSubTitle1')}
+        <span className="font-bold">{t('homeSubTitle2')}</span> {t('homeSubTitle3')}
+        <span className="font-bold">{t('homeSubTitle4')}</span> {t('homeSubTitle5')}
+        <span className="font-bold">{t('homeSubTitle6')}</span>{' '}
+        <span className="underline">{t('homeSubTitle7')}</span>{' '}
       </motion.h1>
 
       <motion.div
@@ -129,21 +126,21 @@ export default function Intro() {
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="/CV-EN.pdf"
-          title={t("homeCVDownload")}
+          title={t('homeCVDownload')}
           download
         >
-          {t("homeCV-EN")}{" "}
+          {t('homeCV-EN')}{' '}
           <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        {i18next.language !== "en" && (
+        {i18next.language !== 'en' && (
           <a
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
             href="/CV-CN.pdf"
-            title={t("homeCVDownload")}
+            title={t('homeCVDownload')}
             download
           >
-            {t("homeCV-CN")}{" "}
+            {t('homeCV-CN')}{' '}
             <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
           </a>
         )}
@@ -163,7 +160,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/weixi-guan"
           target="_blank"
-          title={t("homeLinkedin")}
+          title={t('homeLinkedin')}
         >
           <LuLinkedin />
         </a>
@@ -172,7 +169,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/ChrisioGwaan"
           target="_blank"
-          title={t("homeGitHub")}
+          title={t('homeGitHub')}
         >
           <LuGithub />
         </a>
@@ -181,7 +178,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="mailto:chris322322@gmail.com"
           target="_blank"
-          title={t("homeEmailContact")}
+          title={t('homeEmailContact')}
         >
           <LuMail />
         </a>
