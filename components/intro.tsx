@@ -3,18 +3,52 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-// import Link from "next/link";
-// import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuMail, LuArrowDown, LuGithub, LuLinkedin } from "react-icons/lu";
 import { useSectionInView } from "@/lib/hooks";
-// import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
 import "../lib/i18n";
+import i18next from "i18next";
 
+interface SocialLinkProps {
+  href: string;
+  title: string;
+  children: React.ReactNode;
+}
+
+const SocialLink: React.FC<SocialLinkProps> = ({ href, title, children }) => (
+  <a
+    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+    href={href}
+    target="_blank"
+    title={title}
+    rel="noopener noreferrer"
+  >
+    {children}
+  </a>
+);
+
+interface DownloadCVButtonProps {
+  href: string;
+  title: string;
+  label: string;
+}
+
+const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label }) => (
+  <a
+    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+    href={href}
+    title={title}
+    download
+  >
+    {label}{" "}
+    <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
+  </a>
+);
+
+// Main Intro component
 export default function Intro() {
   const { t } = useTranslation();
   const { ref } = useSectionInView("home", 0.5);
-  // const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -24,6 +58,7 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
+          {/* Animated avatar image */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -62,17 +97,17 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">
-          {t("homeTitle")}
-        </span>{" "}
-        {t("homeSubTitle1")}<span className="font-bold">{t("homeSubTitle2")}</span>{" "}
-        {t("homeSubTitle3")}<span className="font-bold">{t("homeSubTitle4")}</span>{" "}
-        {t("homeSubTitle5")}<span className="font-bold">{t("homeSubTitle6")}</span>{" "}
+        <span className="font-bold">{t("homeTitle")}</span> {t("homeSubTitle1")}
+        <span className="font-bold">{t("homeSubTitle2")}</span>{" "}
+        {t("homeSubTitle3")}
+        <span className="font-bold">{t("homeSubTitle4")}</span>{" "}
+        {t("homeSubTitle5")}
+        <span className="font-bold">{t("homeSubTitle6")}</span>{" "}
         <span className="underline">{t("homeSubTitle7")}</span>{" "}
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-wrap items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -101,16 +136,29 @@ export default function Intro() {
           <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV-CN.pdf"
-          title={t("homeCVDownload")}
-          download
-        >
-          {t("homeCV-CN")}{" "}
-          <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+        {i18next.language !== "en" && (
+          <a
+            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+            href="/CV-CN.pdf"
+            title={t("homeCVDownload")}
+            download
+          >
+            {t("homeCV-CN")}{" "}
+            <LuArrowDown className="opacity-60 group-hover:translate-y-1 transition" />
+          </a>
+        )}
+      </motion.div>
 
+      <br />
+
+      <motion.div
+        className="flex flex-wrap items-center justify-center gap-2 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/weixi-guan"
@@ -141,7 +189,7 @@ export default function Intro() {
 
       <br />
 
-      <motion.div
+      {/* <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -170,7 +218,7 @@ export default function Intro() {
         >
           {t("homeLanguage3")}
         </a>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
