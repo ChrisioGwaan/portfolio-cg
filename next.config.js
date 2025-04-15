@@ -9,8 +9,11 @@ const nextConfig = {
     ],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {},
   },
+  // devIndicators turn it off
+  devIndicators: false,
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;
