@@ -1,11 +1,9 @@
 {
-  "name": "@ChrisioGwaan/cg-portfolio",
-  "version": "1.2.2-final",
+  "name": "chrisio-portfolio",
+  "private": true,
+  "version": "1.2.2",
   "author": "Weixi (Chrisio) Guan <chris322322@gmail.com>",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "dev": "next dev",
     "test": "jest --passWithNoTests",
@@ -16,8 +14,8 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@react-email/components": "^0.0.7",
-    "@react-email/tailwind": "^0.0.8",
+    "@react-email/components": "^0.0.36",
+    "@react-email/tailwind": "^1.0.4",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -28,8 +26,8 @@
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.17",
     "i18next": "^24.2.3",
-    "next": "13.4.8",
-    "postcss": "8.4.24",
+    "next": "^15.3.0",
+    "postcss": "^8.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
@@ -37,7 +35,7 @@
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "resend": "^0.16.0",
+    "resend": "^4.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.5",
     "use-scramble": "^2.2.15"
