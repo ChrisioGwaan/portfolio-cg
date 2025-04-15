@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const country = request.geo?.country || 'AU';
+  const country = (request as any).geo?.country || 'AU';
   const host = request.headers.get('host') || '';
 
   const isFromChina = country === 'CN';
