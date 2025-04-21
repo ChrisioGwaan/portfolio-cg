@@ -56,8 +56,7 @@ export const experiencesData = [
     id: 'experience2',
     title: 'Bachelor of Software Engineering',
     location: 'Royal Melbourne Institute of Technology (RMIT) University',
-    description: 
-      'Accredited by the Australian Computer Society (ACS).',
+    description: 'Accredited by the Australian Computer Society (ACS).',
     icon: React.createElement(LuGraduationCap),
     date: '2021 FEB. - 2024 DEC.',
   },

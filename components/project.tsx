@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { LuChevronLeft, LuChevronRight, LuX } from "react-icons/lu";
+import React, { useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { LuChevronLeft, LuChevronRight, LuX } from 'react-icons/lu';
 
 export type ProjectProps = {
   title: string;
@@ -12,12 +12,7 @@ export type ProjectProps = {
   images: Array<string | StaticImageData>;
 };
 
-export default function Project({
-  title,
-  description,
-  skills,
-  images,
-}: ProjectProps) {
+export default function Project({ title, description, skills, images }: ProjectProps) {
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
   const [previewOpen, setPreviewOpen] = useState(false);
 
@@ -38,7 +33,6 @@ export default function Project({
         transition={{ duration: 0.6 }}
         className="flex flex-col md:flex-row items-start gap-6 max-w-4xl mx-auto p-4"
       >
-        {/* Slideshow */}
         <div className="relative w-full md:w-2/3 aspect-video overflow-hidden rounded-lg shadow-lg">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -79,26 +73,19 @@ export default function Project({
           )}
         </div>
 
-        {/* Details */}
         <div className="w-full md:w-2/3 flex flex-col gap-4">
           <h3 className="text-2xl font-bold">{title}</h3>
           <ul className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <li
-                key={skill}
-                className="bg-white text-[#8cfa9e] px-3 py-1 rounded-full text-sm"
-              >
+            {skills.map(skill => (
+              <li key={skill} className="bg-white text-[#8cfa9e] px-3 py-1 rounded-full text-sm">
                 {skill}
               </li>
             ))}
           </ul>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            {description}
-          </p>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{description}</p>
         </div>
       </motion.div>
 
-      {/* Preview Modal */}
       <AnimatePresence>
         {previewOpen && (
           <motion.div
@@ -110,7 +97,7 @@ export default function Project({
           >
             {hasPrev && (
               <button
-                onClick={(e) => {
+                onClick={e => {
                   e.stopPropagation();
                   paginate(-1);
                 }}
@@ -121,7 +108,7 @@ export default function Project({
             )}
             {hasNext && (
               <button
-                onClick={(e) => {
+                onClick={e => {
                   e.stopPropagation();
                   paginate(1);
                 }}
@@ -136,7 +123,7 @@ export default function Project({
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.2 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={e => e.stopPropagation()}
             >
               <Image
                 src={images[imageIndex]}
