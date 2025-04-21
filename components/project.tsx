@@ -8,8 +8,8 @@ import { LuChevronLeft, LuChevronRight, LuX } from 'react-icons/lu';
 export type ProjectProps = {
   title: string;
   description: string;
-  skills: string[];
-  images: Array<string | StaticImageData>;
+  skills: readonly string[];
+  images: readonly (string | StaticImageData)[];
 };
 
 export default function Project({ title, description, skills, images }: ProjectProps) {
