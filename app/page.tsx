@@ -13,7 +13,9 @@ export default function Home() {
       <SectionDivider />
       <About />
       <Experience />
-      <Projects />
+      <div className="self-stretch w-full max-w-screen-xl mx-auto">
+        <Projects />
+      </div>
       <Skills />
       <Photography />
     </main>
