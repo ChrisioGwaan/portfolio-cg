@@ -11,7 +11,6 @@ const nextConfig = {
   experimental: {
     serverActions: {},
   },
-  // devIndicators turn it off
   devIndicators: false,
   reactStrictMode: true,
 };
