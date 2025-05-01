@@ -1,8 +1,0 @@
-{
-  "regions": ["all"],
-  "functions": {
-    "middleware": {
-      "geo": true
-    }
-  }
-}
