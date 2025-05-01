@@ -8,6 +8,7 @@ import ThemeContextProvider from '@/context/theme-context';
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
 import LanguageSwitch from '@/components/language-switch';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
