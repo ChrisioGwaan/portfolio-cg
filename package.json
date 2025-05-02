@@ -5,10 +5,10 @@
   "author": "Weixi (Chrisio) Guan <chris322322@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
     "test": "jest --passWithNoTests",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3002",
     "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
