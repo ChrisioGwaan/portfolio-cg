@@ -75,6 +75,10 @@ export default function Footer() {
         </small>
 
         <div className="text-xs text-gray-400 mt-1">
+          Minecraft font used under SIL Open Font License © Idrees Hassan – <a href="https://github.com/IdreesInc/Minecraft-Font" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#8cfa9e]">View on GitHub</a>
+        </div>
+
+        <div className="text-xs text-gray-400 mt-1">
           Made with{' '}
           <a
             href="https://nextjs.org/"

@@ -13,3 +13,11 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/Minecraft-Font/Minecraft.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
