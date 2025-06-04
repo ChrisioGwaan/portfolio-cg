@@ -5,6 +5,7 @@ import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
 import Photography from '@/components/photography';
+import Education from '@/components/education';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
+      <Education />
       <Experience />
       <div className="self-stretch w-full max-w-screen-xl mx-auto">
         <Projects />
