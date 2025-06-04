@@ -48,7 +48,7 @@ export const experiencesData = [
     title: 'Software Development Intern',
     location: 'Total Game Development',
     description:
-      'Develop new features for the open source game War Of Salvation in C++. Fix sereral bugs in pointers and memory leaks for the Ship units.',
+      'Develop new features for the open source game War Of Salvation in C++. Fix several bugs in pointers and memory leaks for the Ship units.',
     icon: React.createElement(CgWorkAlt),
     date: '2024 DEC. - 2025 MAR.',
   },
