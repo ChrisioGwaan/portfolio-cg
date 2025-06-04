@@ -12,13 +12,12 @@ export default function Footer() {
     <footer className="py-8 px-4 mt-12 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-3">
         <div className="flex gap-3 items-center">
-          <a
-            href="mailto:chris322322@gmail.com"
-            className="flex items-center gap-1 hover:text-[#8cfa9e] transition"
-            title="Email"
-          >
-            <LuMail className="inline-block" /> chris322322@gmail.com
-          </a>
+          
+          <span className="flex items-center gap-1 hover:text-[#8cfa9e] transition">
+            <a href="mailto:chris322322@gmail.com" title="Email">
+              <LuMail className="inline-block" /> chris322322@gmail.com
+            </a>
+          </span>
 
           <span className="hidden sm:inline mx-2 text-gray-300 dark:text-gray-600">|</span>
 
@@ -31,14 +30,14 @@ export default function Footer() {
           
           <span className="flex items-center gap-1">
             <LuPhone className="inline-block" /> AU:{' '}
-            <span className="font-mono">+61 411 146 832</span>
+            <span className="font-mono">+61&nbsp;411&nbsp;146&nbsp;832</span>
           </span>
 
           <span className="hidden sm:inline mx-2 text-gray-300 dark:text-gray-600">|</span>
           
           <span className="flex items-center gap-1">
             <LuPhone className="inline-block" /> CN:{' '}
-            <span className="font-mono">+86 150 1186 7647</span>
+            <span className="font-mono">+86&nbsp;150&nbsp;1186&nbsp;7647</span>
           </span>
         </div>
 
