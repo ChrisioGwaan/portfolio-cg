@@ -17,6 +17,11 @@ export const links = [
     hash: '#about',
   },
   {
+    id: 'education',
+    name: 'Education',
+    hash: '#education',
+  },
+  {
     id: 'experience',
     name: 'Experience',
     hash: '#experience',
@@ -40,6 +45,36 @@ export const links = [
   //   name: "Contact",
   //   hash: "#contact",
   // },
+] as const;
+
+export const educationData = [
+  {
+    id: 'education1',
+    title: '',
+    location: '',
+    description: '',
+    icon: React.createElement(LuGraduationCap),
+    date: '',
+    status: '',
+  },
+  {
+    id: 'education2',
+    title: '',
+    location: '',
+    description: '',
+    icon: React.createElement(LuGraduationCap),
+    date: '',
+    status: '',
+  },
+  {
+    id: 'education3',
+    title: '',
+    location: '',
+    description: '',
+    icon: React.createElement(LuGraduationCap),
+    date: '',
+    status: '',
+  },
 ] as const;
 
 export const experiencesData = [
