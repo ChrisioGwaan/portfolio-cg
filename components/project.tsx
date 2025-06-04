@@ -77,7 +77,7 @@ export default function Project({ title, description, skills, images }: ProjectP
           <h3 className="text-2xl font-bold">{title}</h3>
           <ul className="flex flex-wrap gap-2">
             {skills.map(skill => (
-              <li key={skill} className="bg-white text-[#8cfa9e] px-3 py-1 rounded-full text-sm">
+              <li key={skill} className="bg-white text-[#12ec22] px-3 py-1 rounded-full text-sm dark:bg-gray-800 dark:text-gray-300 shadow">
                 {skill}
               </li>
             ))}
