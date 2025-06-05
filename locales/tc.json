@@ -57,29 +57,28 @@
   "Experience": "學歷同工作經驗",
   "experience": "學歷同工作經驗",
   "experience1": {
-    "title": "軟件開發實習生",
-    "location": "Total Game Development",
-    "description": "用 C++ 為開源遊戲《War Of Salvation》開發新功能同遊戲單位，同時修復 Ship 單位中多個指針相關同記憶體洩漏問題。"
+    "title": "Tutor",
+    "location": "Tutor Lim",
+    "description": "为大學生提供線上或線下輔導課程，協助他们完成作業和課題。這包括提供學習技巧和指導，幫助他們理解和解決問題，並有效完成任務。",
+    "date": "2023 MAY. - PRESENT"
   },
   "experience2": {
-    "title": "軟件工程學學士（本科）",
-    "location": "墨爾本皇家理工大學 - RMIT University",
-    "description": ""
+    "title": "Software Development Intern",
+    "location": "Total Game Development",
+    "description": "为開源C++遊戲《War of Salvation》開發新遊戲玩法特性，提升玩家體驗和遊戲功能。識別並解決內存管理問題，包括指針相關的錯誤和Ship單元系統中的內存泄漏，改善穩定性。",
+    "date": "2024 DEC. - 2025 MAR."
   },
   "experience3": {
-    "title": "後端開發工程師",
+    "title": "Back End Developer",
     "location": "ABC Academy of Music",
-    "description": "基於 Java，使用 Spring Boot 同 JPA 設計同實現微服務架構，顯著提升後端模組化同可擴展性。搭建 Jenkins CI/CD 流水線，優化部署流程，大幅減少系統停機時間。透過敏捷開發（Agile Sprint）修復超過30個功能、邏輯同安全問題，確保系統穩定同高效運行。"
+    "description": "基於 Java，使用 Spring Boot 同 JPA 設計同實現微服務架構，顯著提升後端模組化同可擴展性。搭建 Jenkins CI/CD 流水線，優化部署流程，大幅減少系統停機時間。透過敏捷開發（Agile Sprint）修復超過30個功能、邏輯同安全問題，確保系統穩定同高效運行。",
+    "date": "2024 JUL. - 2024 NOV."
   },
   "experience4": {
-    "title": "軟件工程實習生",
-    "location": "廣東建科創新技術研究院有限公司",
-    "description": "基於 Spring Boot 同 Vue.js 開發客戶關係管理（CRM）系統，為客戶提供高效管理數據、互動同業務活動嘅平台，顯著提升客戶服務質素。"
-  },
-  "experience5": {
-    "title": "基礎課程 - 科學、工程與健康基礎",
-    "location": "墨爾本皇家理工大學 - RMIT University",
-    "description": ""
+    "title": "Software Engineer Intern",
+    "location": "Guangdong Provincial Academy of Building Research Group Co.Ltd",
+    "description": "基于 Spring Boot 同 Vue.js 開發客戶關係管理（CRM）系統，為客戶提供高效管理數據、互動同業務活動的平臺，顯著提升客戶服務質量。",
+    "date": "2023 JULY. - 2024 MAY."
   },
 
   "Projects": "項目經驗",

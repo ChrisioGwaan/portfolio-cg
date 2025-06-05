@@ -22,7 +22,7 @@ export default function Experience() {
         {experiencesData.map(item => (
           <VerticalTimelineElement
             key={item.id}
-            date={item.date}
+            date={t(`${item.id}.date`)}
             icon={item.icon}
             contentStyle={{
               background: theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',

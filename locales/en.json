@@ -57,29 +57,28 @@
   "Experience": "Experience",
   "experience": "Experience",
   "experience1": {
-    "title": "Software Development Intern",
-    "location": "Total Game Development",
-    "description": "Develop new features for the open source game War Of Salvation in C++. Fix several bugs in pointers and memory leaks for the Ship units."
+    "title": "Tutor",
+    "location": "Tutor Lim",
+    "description": "Conduct online or in-person tutoring sessions to university students, assisting them with assignments and homework. This includes offering study tips and guidance to help them understand and resolve problems and complete their tasks effectively.",
+    "date": "2023 MAY. - PRESENT"
   },
   "experience2": {
-    "title": "Bachelor of Software Engineering",
-    "location": "Royal Melbourne Institute of Technology (RMIT) University",
-    "description": "Accredited by the Australian Computer Society (ACS)."
+    "title": "Software Development Intern",
+    "location": "Total Game Development",
+    "description": "Contributed to the development of new gameplay features for the open source C++ game War of Salvation, enhancing player experience and game functionality. Identified and resolved memory management issues, including pointer related bugs and memory leaks in the Ship unit system, improving stability.",
+    "date": "2024 DEC. - 2025 MAR."
   },
   "experience3": {
     "title": "Back End Developer",
     "location": "ABC Academy of Music",
-    "description": "Engineered Java-based microservices architecture using Spring Boot and JPA to improve backend modularity and scalability. Established Jenkins CI/CD pipelines, streamlining deployments and reducing downtime significantly. Resolved over 30 functional, logical, and security issues through Agile sprints, ensuring robust application performance."
+    "description": "Engineered Java-based microservices architecture using Spring Boot and JPA to improve backend modularity and scalability. Established Jenkins CI/CD pipelines, streamlining deployments and reducing downtime significantly. Resolved over 30 functional, logical, and security issues through Agile sprints, ensuring robust application performance.",
+    "date": "2024 JUL. - 2024 NOV."
   },
   "experience4": {
     "title": "Software Engineer Intern",
     "location": "Guangdong Provincial Academy of Building Research Group Co.Ltd",
-    "description": "Developed Customer Relationship Management (CRM) software system using Spring Boot backend and Vue.js frontend, providing customers with a platform to effectively manage data, interactions, and activities, resulting in enhanced customer service."
-  },
-  "experience5": {
-    "title": "Foundation Study in Science Engineering and Health",
-    "location": "Royal Melbourne Institute of Technology (RMIT) University",
-    "description": ""
+    "description": "Developed Customer Relationship Management (CRM) software system using Spring Boot backend and Vue.js frontend, providing customers with a platform to effectively manage data, interactions, and activities, resulting in enhanced customer service.",
+    "date": "2023 JULY. - 2024 MAY."
   },
 
   "Projects": "Projects",
