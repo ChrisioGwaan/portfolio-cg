@@ -65,16 +65,7 @@ export const educationData = [
     icon: React.createElement(LuGraduationCap),
     date: '',
     status: '',
-  },
-  {
-    id: 'education3',
-    title: '',
-    location: '',
-    description: '',
-    icon: React.createElement(LuGraduationCap),
-    date: '',
-    status: '',
-  },
+  }
 ] as const;
 
 export const experiencesData = [

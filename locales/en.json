@@ -33,20 +33,13 @@
   "Education": "Education",
   "education": "Education",
   "education1": {
-    "title": "Master of Software Engineering",
-    "location": "The University of Melbourne",
-    "description": "Last year in 2024, I received an offer from the University of Melbourne to pursue a Master's degree in Software Engineering, for which I am truly grateful. However, due to personal circumstances and my desire for a more practical, industry-oriented education at the time, I decided to defer the offer. When the time is right, I will consider resuming this opportunity.",
-    "date": "TBD",
-    "status": "Planning"
-  },
-  "education2": {
     "title": "Bachelor of Software Engineering",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
     "description": "During my studies, I gained a solid foundation in software engineering principles and practices. What makes software engineering special is its emphasis on real, industry-based projects that cover the entire software development lifecycle. Although software engineering is part of the broader engineering discipline, RMIT University offers this degree through the School of Computing Technologies. As a result, at the time I received my Graduate Certificate, the degree was accredited by the Australian Computer Society (ACS).",
     "date": "2021 FEB. - 2024 DEC.",
     "status": "Completed"
   },
-  "education3": {
+  "education2": {
     "title": "Foundation Study in Science Engineering and Health",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
     "description": "The Foundation Studies program at RMIT University is designed to prepare students for undergraduate study. I focused primarily on advanced mathematics and physics, achieving GPA 4 out of 4 in all related subjects while developing strong analytical and problem-solving skills in an English-speaking academic environment.",
