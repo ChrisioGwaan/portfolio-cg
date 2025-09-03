@@ -57,7 +57,7 @@ export default function Header() {
                     'text-sm font-medium px-4 py-2 rounded-full transition',
                     activeSection === link.id
                       ? 'bg-green-200 dark:bg-gray-700 text-gray-900 dark:text-white'
-                      : 'text-gray-600 hover:text-[#ff91b5] dark:hover:text-[#ff91b5]'
+                      : 'text-gray-600 hover:text-[#8cfa9e] dark:hover:text-[#8cfa9e]'
                   )}
                   onClick={() => {
                     setActiveSection(link.id);
@@ -92,7 +92,7 @@ export default function Header() {
               >
                 <Link
                   className={clsx(
-                    'flex w-full items-center justify-center px-3 py-3 hover:text-[#ff91b5] transition dark:text-gray-300 dark:hover:text-[#ff91b5]',
+                    'flex w-full items-center justify-center px-3 py-3 hover:text-[#8cfa9e] transition dark:text-gray-300 dark:hover:text-[#8cfa9e]',
                     {
                       'text-gray-950 dark:text-gray-200': activeSection === link.id,
                     }
