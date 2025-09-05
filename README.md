@@ -1,7 +1,5 @@
 <div align="center">
 
-<p>我的個人簡介 | My Portfolio</p>
-
 </div>
 
 ## Development Setup
