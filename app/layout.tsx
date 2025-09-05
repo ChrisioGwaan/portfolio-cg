@@ -13,7 +13,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Weixi (Chrisio) Gwaan | Portfolio',
+  title: 'Weixi Guan (Chrisio Gwaan, 关炜熙, 關煒熙) — Official Site',
   description: 'Chrisio is a full-stack software developer with 1 year of experience.',
 };
 
