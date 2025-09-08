@@ -27,6 +27,7 @@
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.17",
     "i18next": "^24.2.3",
+    "openai": "^5.19.1",
     "next": "^15.5.2",
     "pg": "^8.16.3",
     "postcss": "^8.5.3",
