@@ -65,7 +65,7 @@ export const educationData = [
     icon: React.createElement(LuGraduationCap),
     date: '',
     status: '',
-  }
+  },
 ] as const;
 
 export const experiencesData = [
@@ -73,8 +73,7 @@ export const experiencesData = [
     id: 'experience1',
     title: '',
     location: '',
-    description:
-      '',
+    description: '',
     icon: React.createElement(CgWorkAlt),
     date: '',
   },
@@ -90,8 +89,7 @@ export const experiencesData = [
     id: 'experience3',
     title: '',
     location: '',
-    description:
-      '',
+    description: '',
     icon: React.createElement(CgWorkAlt),
     date: '',
   },
@@ -99,11 +97,10 @@ export const experiencesData = [
     id: 'experience4',
     title: '',
     location: '',
-    description:
-      '',
+    description: '',
     icon: React.createElement(CgWorkAlt),
     date: '',
-  }
+  },
 ] as const;
 
 export const projectsData = [

@@ -31,15 +31,15 @@ export default function ChatBotPopup() {
       const data = await res.json();
       const reply = data?.choices?.[0]?.message;
       if (reply && reply.content) {
-        setMessages((prev) => [...prev, reply]);
+        setMessages(prev => [...prev, reply]);
       } else {
-        setMessages((prev) => [
+        setMessages(prev => [
           ...prev,
           { role: 'assistant', content: 'Sorry, I could not process your request.' },
         ]);
       }
     } catch (error) {
-      setMessages((prev) => [
+      setMessages(prev => [
         ...prev,
         { role: 'assistant', content: 'An error occurred. Please try again.' },
       ]);
@@ -50,7 +50,6 @@ export default function ChatBotPopup() {
 
   return (
     <div>
-
       <button
         onClick={() => setOpen(true)}
         className="bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-[#8cfa9e] border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
@@ -83,9 +82,7 @@ export default function ChatBotPopup() {
               {messages.slice(1).map((msg, i) => (
                 <div
                   key={i}
-                  className={`flex ${
-                    msg.role === 'user' ? 'justify-end' : 'justify-start'
-                  }`}
+                  className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <span
                     className={`max-w-[80%] px-3 py-2 rounded-lg break-words ${
@@ -98,18 +95,16 @@ export default function ChatBotPopup() {
                   </span>
                 </div>
               ))}
-              {loading && (
-                <p className="text-gray-500 text-xs">Thinking...</p>
-              )}
+              {loading && <p className="text-gray-500 text-xs">Thinking...</p>}
             </div>
 
             <div className="p-2 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 flex">
               <input
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={e => setInput(e.target.value)}
                 className="flex-1 px-3 py-2 border rounded-l-md bg-gray-50 dark:bg-gray-700 text-sm outline-none"
                 placeholder="Ask me anything..."
-                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                onKeyDown={e => e.key === 'Enter' && handleSend()}
               />
               <button
                 onClick={handleSend}
