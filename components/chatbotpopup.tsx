@@ -19,16 +19,33 @@ export default function ChatBotPopup() {
     setInput('');
     setLoading(true);
 
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: newMessages }),
-    });
-
-    const data = await res.json();
-    const reply = data?.choices?.[0]?.message;
-    setMessages((prev) => [...prev, reply]);
-    setLoading(false);
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: newMessages }),
+      });
+      if (!res.ok) {
+        throw new Error(`API error: ${res.status}`);
+      }
+      const data = await res.json();
+      const reply = data?.choices?.[0]?.message;
+      if (reply && reply.content) {
+        setMessages((prev) => [...prev, reply]);
+      } else {
+        setMessages((prev) => [
+          ...prev,
+          { role: 'assistant', content: 'Sorry, I could not process your request.' },
+        ]);
+      }
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: 'An error occurred. Please try again.' },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
