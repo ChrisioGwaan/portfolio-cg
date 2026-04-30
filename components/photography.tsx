@@ -34,13 +34,13 @@ export default function Photography() {
     >
       <SectionHeading>{t('Photography')}</SectionHeading>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {images.map((img, index) => (
           <motion.img
             key={img.src}
             src={img.src}
             alt={img.alt}
-            className="w-2/5 h-auto cursor-pointer rounded-lg shadow-md hover:scale-105 transition"
+            className="h-auto w-full cursor-pointer rounded-lg shadow-md hover:scale-[1.02] transition"
             custom={index}
             variants={fadeInAnimationVariants}
             initial="hidden"
@@ -54,7 +54,7 @@ export default function Photography() {
       <AnimatePresence>
         {previewSrc && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999]"
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
