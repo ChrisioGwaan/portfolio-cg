@@ -13,7 +13,6 @@ export default function LanguageSwitch() {
 
   const availableLanguages = [
     { code: 'en', label: 'English' },
-    { code: 'gr', label: 'Ελληνικά' },
     { code: 'sc', label: '简体中文' },
     { code: 'tc', label: '繁體中文' },
   ];
