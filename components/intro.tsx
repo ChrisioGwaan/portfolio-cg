@@ -47,7 +47,7 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label 
 
 export default function Intro() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView('home', 0.5);
+  const { ref } = useSectionInView('home');
   const [showWechat, setShowWechat] = useState(false);
 
   return (

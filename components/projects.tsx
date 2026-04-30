@@ -9,7 +9,7 @@ import '../lib/i18n';
 import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
-  const { ref } = useSectionInView('projects', 0.5);
+  const { ref } = useSectionInView('projects');
   const { t } = useTranslation();
 
   return (
