@@ -19,13 +19,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} overflow-x-hidden bg-gray-50 text-gray-950 relative pt-24 md:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className="bg-[#8cfa9e] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[50rem] sm:w-[68.75rem] dark:bg-[#8cfa9e]"></div>
-        <div className="bg-[#8cfa9e] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[50rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#8cfa9e]"></div>
-
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
@@ -33,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
 
             <Toaster position="top-right" />
-            <div className="fixed bottom-5 right-5 flex gap-3">
+            <div className="fixed bottom-4 right-4 z-[998] flex gap-2 sm:bottom-5 sm:right-5 sm:gap-3">
               <LanguageSwitch />
               <ThemeSwitch />
             </div>
