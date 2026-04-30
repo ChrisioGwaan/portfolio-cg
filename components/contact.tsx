@@ -5,7 +5,6 @@
 // import { motion } from "framer-motion";
 // import { useSectionInView } from "@/lib/hooks";
 // import { sendEmail } from "@/actions/sendEmail";
-// import SubmitBtn from "./submit-btn";
 // import toast from "react-hot-toast";
 
 // export default function Contact() {
@@ -67,7 +66,6 @@
 //           required
 //           maxLength={5000}
 //         />
-//         <SubmitBtn />
 //       </form>
 //     </motion.section>
 //   );
