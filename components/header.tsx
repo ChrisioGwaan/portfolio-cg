@@ -7,6 +7,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useTranslation } from 'react-i18next';
+import { LuMenu, LuX } from 'react-icons/lu';
 import '../lib/i18n';
 
 export default function Header() {
@@ -32,57 +33,61 @@ export default function Header() {
   return (
     <>
       {/* Mobile */}
-      <div ref={menuRef} className="fixed top-4 left-4 z-[999] flex items-center gap-3 sm:hidden">
+      <div ref={menuRef} className="fixed left-4 right-4 top-4 z-[999] md:hidden">
         <button
           onClick={() => setMenuOpen(prev => !prev)}
-          className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-xl text-gray-800 dark:text-white transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
         >
-          ☰
+          {menuOpen ? <LuX size={22} /> : <LuMenu size={22} />}
         </button>
 
         <AnimatePresence>
           {menuOpen && (
             <motion.nav
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-xl rounded-full px-6 py-2 flex gap-3 overflow-x-auto max-w-[70vw] whitespace-nowrap"
+              initial={{ opacity: 0, y: -8, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              className="mt-3 w-full rounded-2xl border border-black/5 bg-white/95 p-2 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-gray-900/95"
             >
-              {links.map(link => (
-                <Link
-                  key={link.hash}
-                  href={link.hash}
-                  className={clsx(
-                    'text-sm font-medium px-4 py-2 rounded-full transition',
-                    activeSection === link.id
-                      ? 'bg-green-200 dark:bg-gray-700 text-gray-900 dark:text-white'
-                      : 'text-gray-600 hover:text-[#8cfa9e] dark:hover:text-[#8cfa9e]'
-                  )}
-                  onClick={() => {
-                    setActiveSection(link.id);
-                    setTimeOfLastClick(Date.now());
-                    setMenuOpen(false);
-                  }}
-                >
-                  {t(link.name)}
-                </Link>
-              ))}
+              <div className="grid grid-cols-2 gap-2">
+                {links.map(link => (
+                  <Link
+                    key={link.hash}
+                    href={link.hash}
+                    className={clsx(
+                      'rounded-xl px-3 py-3 text-center text-sm font-medium transition',
+                      activeSection === link.id
+                        ? 'bg-green-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                        : 'text-gray-600 hover:text-[#8cfa9e] dark:hover:text-[#8cfa9e]'
+                    )}
+                    onClick={() => {
+                      setActiveSection(link.id);
+                      setTimeOfLastClick(Date.now());
+                      setMenuOpen(false);
+                    }}
+                  >
+                    {t(link.name)}
+                  </Link>
+                ))}
+              </div>
             </motion.nav>
           )}
         </AnimatePresence>
       </div>
 
       {/* Desktop */}
-      <header className="z-[999] relative hidden sm:block">
+      <header className="z-[999] relative hidden md:block">
         <motion.div
-          className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[48rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          className="fixed left-1/2 top-6 h-[3.25rem] w-[calc(100%-2rem)] max-w-[48rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
           initial={{ y: -100, x: '-50%', opacity: 0 }}
           animate={{ y: 0, x: '-50%', opacity: 1 }}
         ></motion.div>
 
-        <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-          <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <nav className="fixed left-1/2 top-[1.7rem] flex h-[initial] w-[calc(100%-2rem)] max-w-[48rem] -translate-x-1/2 overflow-x-auto py-0">
+          <ul className="mx-auto flex min-w-max flex-nowrap items-center justify-center gap-3 text-[0.9rem] font-medium text-gray-500 lg:gap-5">
             {links.map(link => (
               <motion.li
                 className="h-3/4 flex items-center justify-center relative"
