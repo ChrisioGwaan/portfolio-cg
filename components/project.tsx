@@ -31,9 +31,9 @@ export default function Project({ title, description, skills, images }: ProjectP
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col md:flex-row items-start gap-6 max-w-4xl mx-auto p-4"
+        className="mx-auto flex w-full max-w-5xl flex-col items-stretch gap-5 px-0 py-5 sm:px-2 md:flex-row md:items-start md:gap-6"
       >
-        <div className="relative w-full md:w-2/3 aspect-video overflow-hidden rounded-lg shadow-lg">
+        <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg md:w-1/2 lg:w-3/5">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -73,8 +73,8 @@ export default function Project({ title, description, skills, images }: ProjectP
           )}
         </div>
 
-        <div className="w-full md:w-2/3 flex flex-col gap-4">
-          <h3 className="text-2xl font-bold">{title}</h3>
+        <div className="w-full min-w-0 flex flex-col gap-3 md:w-1/2 lg:w-2/5">
+          <h3 className="text-xl font-bold leading-tight sm:text-2xl">{title}</h3>
           <ul className="flex flex-wrap gap-2">
             {skills.map(skill => (
               <li
@@ -85,14 +85,16 @@ export default function Project({ title, description, skills, images }: ProjectP
               </li>
             ))}
           </ul>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{description}</p>
+          <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 sm:text-base">
+            {description}
+          </p>
         </div>
       </motion.div>
 
       <AnimatePresence>
         {previewOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -104,7 +106,7 @@ export default function Project({ title, description, skills, images }: ProjectP
                   e.stopPropagation();
                   paginate(-1);
                 }}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-80 rounded-full p-2 shadow focus:outline-none"
+                className="absolute left-2 top-1/2 z-10 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 shadow focus:outline-none sm:left-4"
               >
                 <LuChevronLeft size={24} />
               </button>
@@ -115,13 +117,13 @@ export default function Project({ title, description, skills, images }: ProjectP
                   e.stopPropagation();
                   paginate(1);
                 }}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-80 rounded-full p-2 shadow focus:outline-none"
+                className="absolute right-2 top-1/2 z-10 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 shadow focus:outline-none sm:right-4"
               >
                 <LuChevronRight size={24} />
               </button>
             )}
             <motion.div
-              className="relative max-w-[90vw] max-h-[90vh]"
+              className="relative max-h-[90vh] max-w-[92vw]"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -133,7 +135,7 @@ export default function Project({ title, description, skills, images }: ProjectP
                 alt={`${title} large preview ${imageIndex + 1}`}
                 width={1200}
                 height={800}
-                className="rounded-lg object-contain"
+                className="max-h-[90vh] w-auto rounded-lg object-contain"
               />
               <button
                 onClick={() => setPreviewOpen(false)}
