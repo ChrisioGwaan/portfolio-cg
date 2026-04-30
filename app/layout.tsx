@@ -9,7 +9,6 @@ import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
 import LanguageSwitch from '@/components/language-switch';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import ChatBotPopup from '@/components/chatbotpopup';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -37,7 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="fixed bottom-5 right-5 flex gap-3">
               <LanguageSwitch />
               <ThemeSwitch />
-              <ChatBotPopup />
             </div>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
