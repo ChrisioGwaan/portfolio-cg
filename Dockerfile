@@ -1,12 +1,12 @@
-FROM swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/library/node:22.12-alpine
+FROM oven/bun:1.3.12-alpine
 
 WORKDIR /app
 
 COPY . .
 
-RUN npm install --registry=https://registry.npmmirror.com
-RUN npm run build
+RUN bun install --registry=https://registry.npmmirror.com
+RUN bun run build
 
-EXPOSE 3002
+EXPOSE 3000
 
-CMD ["npm", "run", "dev", "--", "-p", "3002"]
+CMD ["bun", "run", "dev"]

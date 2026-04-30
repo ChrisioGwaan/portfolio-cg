@@ -4,9 +4,9 @@
 
 ## Development Setup
 
-### **Node.js** installation
+### **Bun** installation
 
-Click [here](https://nodejs.org/en) to download and install.
+Click [here](https://bun.sh/docs/installation) to download and install.
 
 ### Launch console
 
@@ -15,13 +15,13 @@ Change to project directory on console
 ### Dependency installation
 
 ```
-npm install
+bun install
 ```
 
 ### Hosting on local machine
 
 ```
-npm run dev
+bun run dev
 ```
 
 ### Access the website on browser
