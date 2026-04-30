@@ -48,7 +48,7 @@ export default function LanguageSwitch() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute bottom-14 right-0 bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden border border-white border-opacity-20"
+            className="absolute bottom-14 right-0 w-36 overflow-hidden rounded-xl border border-white border-opacity-20 bg-white shadow-xl dark:bg-gray-800"
             initial={{ opacity: 0, y: 15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.95 }}
@@ -58,9 +58,10 @@ export default function LanguageSwitch() {
               <button
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
-                className={`px-4 py-2 w-full text-left hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                className={`block w-full truncate px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
                   i18n.language === lang.code ? 'font-bold' : ''
                 }`}
+                title={lang.label}
               >
                 {lang.label}
               </button>
