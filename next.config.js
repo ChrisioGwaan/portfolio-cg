@@ -9,9 +9,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: {},
-  },
   devIndicators: false,
   reactStrictMode: true,
 };
