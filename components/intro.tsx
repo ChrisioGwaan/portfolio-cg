@@ -18,7 +18,7 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = ({ href, title, children }) => (
   <a
-    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+    className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-700 transition hover:text-gray-950 focus:scale-[1.08] hover:scale-[1.08] active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 sm:h-14 sm:w-14"
     href={href}
     target="_blank"
     title={title}
@@ -36,7 +36,7 @@ interface DownloadCVButtonProps {
 
 const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label }) => (
   <a
-    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+    className="group flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-base outline-none transition focus:scale-105 hover:scale-105 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 sm:px-7"
     href={href}
     title={title}
     download
@@ -55,7 +55,7 @@ export default function Intro() {
       <section
         ref={ref}
         id="home"
-        className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+        className="mb-24 w-full max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
       >
         <div className="flex items-center justify-center">
           <motion.div
@@ -70,13 +70,13 @@ export default function Intro() {
               height={1080}
               quality={95}
               priority
-              className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-[#8cfa9e] shadow-xl"
+              className="h-32 w-32 rounded-full object-cover border-[0.3rem] border-[#8cfa9e] shadow-xl sm:h-40 sm:w-40 sm:border-[0.35rem]"
             />
           </motion.div>
         </div>
 
         <motion.h1
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-2xl"
+          className="mb-8 mt-4 px-1 text-xl font-medium !leading-[1.55] sm:mb-10 sm:px-4 sm:text-2xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -88,7 +88,7 @@ export default function Intro() {
         </motion.h1>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-2 px-4 text-lg font-medium"
+          className="flex flex-wrap items-center justify-center gap-2 px-1 text-base font-medium sm:px-4 sm:text-lg"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -104,7 +104,7 @@ export default function Intro() {
         </motion.div>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-2 px-4 text-lg font-medium mt-4"
+          className="mt-4 flex flex-wrap items-center justify-center gap-2 px-1 text-lg font-medium sm:px-4"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -119,7 +119,7 @@ export default function Intro() {
 
           <button
             onClick={() => setShowWechat(true)}
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-700 transition hover:text-gray-950 focus:scale-[1.08] hover:scale-[1.08] active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 sm:h-14 sm:w-14"
             title={t('homeWeChat')}
           >
             <TbBrandWechat />
@@ -134,7 +134,7 @@ export default function Intro() {
       <AnimatePresence>
         {showWechat && (
           <motion.div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
