@@ -9,7 +9,7 @@ import Education from '@/components/education';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex w-full flex-col items-center px-4 sm:px-6">
       <Intro />
       <SectionDivider />
       <About />
