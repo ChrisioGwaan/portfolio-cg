@@ -66,38 +66,6 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {t('footerCopyright')}
         </small>
 
-        <small className="mt-2 text-xs text-gray-500">
-          <a
-            href="https://www.chrisiogwaan.com.cn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-[#8cfa9e]"
-          >
-            chrisiogwaan.com.cn{' '}
-          </a>
-          {t('footerDomainRegister')}
-          <a
-            href="https://beian.miit.gov.cn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-[#8cfa9e]"
-          >
-            粤ICP备2025415372号-1
-          </a>
-        </small>
-
-        <div className="text-xs text-gray-400 mt-1">
-          Minecraft font used under SIL Open Font License © Idrees Hassan –{' '}
-          <a
-            href="https://github.com/IdreesInc/Minecraft-Font"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-[#8cfa9e]"
-          >
-            View on GitHub
-          </a>
-        </div>
-
         <div className="text-xs text-gray-400 mt-1">
           Made with{' '}
           <a
