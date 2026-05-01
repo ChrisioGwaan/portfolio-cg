@@ -45,10 +45,11 @@ export const links = [
     name: 'Photography',
     hash: '#photography',
   },
-  // {
-  //   name: "Contact",
-  //   hash: "#contact",
-  // },
+  {
+    id: 'contact',
+    name: 'Contact',
+    hash: '#contact',
+  },
 ] as const;
 
 export const educationData = [

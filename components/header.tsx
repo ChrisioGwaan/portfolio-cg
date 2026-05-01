@@ -113,15 +113,15 @@ export default function Header() {
       {/* Desktop */}
       <header className="z-[999] relative hidden md:block">
         <motion.div
-          className="fixed left-1/2 top-6 h-[3.25rem] w-[calc(100%-2rem)] max-w-[48rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          className="fixed left-1/2 top-6 h-[3.25rem] w-[calc(100%-2rem)] max-w-[56rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
           initial={{ y: -100, x: '-50%', opacity: 0 }}
           animate={{ y: 0, x: '-50%', opacity: 1 }}
         ></motion.div>
 
-        <nav className="fixed left-1/2 top-[1.7rem] flex h-[initial] w-[calc(100%-2rem)] max-w-[48rem] -translate-x-1/2 overflow-x-auto py-0">
+        <nav className="fixed left-1/2 top-[1.7rem] flex h-[initial] w-[calc(100%-2rem)] max-w-[56rem] -translate-x-1/2 overflow-x-auto py-0">
           <ul
             ref={desktopListRef}
-            className="relative mx-auto flex min-w-max flex-nowrap items-center justify-center gap-3 text-[0.9rem] font-medium text-gray-500 lg:gap-5"
+            className="relative mx-auto flex min-w-max flex-nowrap items-center justify-center gap-2 text-[0.9rem] font-medium text-gray-500 lg:gap-4"
           >
             <motion.span
               className="pointer-events-none absolute inset-y-0 rounded-full bg-green-100 dark:bg-gray-800"
@@ -142,7 +142,7 @@ export default function Header() {
                 <Link
                   data-section-id={link.id}
                   className={clsx(
-                    'flex w-full items-center justify-center px-3 py-3 hover:text-[#8cfa9e] transition dark:text-gray-300 dark:hover:text-[#8cfa9e]',
+                    'flex w-full items-center justify-center px-2.5 py-3 hover:text-[#8cfa9e] transition dark:text-gray-300 dark:hover:text-[#8cfa9e]',
                     {
                       'text-gray-950 dark:text-gray-200': activeSection === link.id,
                     }

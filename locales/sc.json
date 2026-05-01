@@ -122,6 +122,9 @@
 
   "Photography": "分享图片库",
   "photography": "分享图片库",
-
+  "Contact": "联系",
+  "contact": "联系",
+  "contactTitle": "联系我",
+  "contactIntro": "欢迎聊工作、side project 或其他任何话题。最快的方式是发邮件，其他联系方式列在下面。",
   "footerCopyright": "关炜熙 (Chrisio) 版权所有。"
 }
