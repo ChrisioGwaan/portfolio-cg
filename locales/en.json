@@ -99,6 +99,27 @@
 
   "Skills": "Skills",
   "skills": "Skills",
+  "skillsIntro": "A practical snapshot of the tools and areas I use to build AI-assisted products, cloud workflows, and maintainable software systems.",
+  "skillCategory1": {
+    "title": "AI & Automation",
+    "description": "Applied AI, copilots, RAG, and document understanding workflows."
+  },
+  "skillCategory2": {
+    "title": "Cloud & Microsoft Platform",
+    "description": "Azure and Power Platform tools used for enterprise automation and data flows."
+  },
+  "skillCategory3": {
+    "title": "Product & Frontend",
+    "description": "Interfaces, product iteration, and user-facing web development."
+  },
+  "skillCategory4": {
+    "title": "Backend & Data",
+    "description": "APIs, services, databases, and application logic across product systems."
+  },
+  "skillCategory5": {
+    "title": "Engineering Workflow",
+    "description": "Delivery habits that keep projects reviewable, testable, and easier to improve."
+  },
 
   "Photography": "Photography",
   "photography": "Photography",

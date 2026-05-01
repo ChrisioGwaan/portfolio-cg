@@ -1,6 +1,6 @@
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
-import { LuGraduationCap } from 'react-icons/lu';
+import { LuBrain, LuCloud, LuCode2, LuDatabase, LuGraduationCap, LuWorkflow } from 'react-icons/lu';
 import gdjkworkImg1 from '@/public/images/projects/gdjk_work_1.png';
 import gdjkworkImg2 from '@/public/images/projects/gdjk_work_2.png';
 import gdjkworkImg3 from '@/public/images/projects/gdjk_work_3.jpeg';
@@ -145,25 +145,44 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  'Artificial Intelligence (AI)',
-  'Microsoft Azure',
-  'Startup Development',
-  'Copilot Studio',
-  'Azure AI Foundry',
-  'Power Platform',
-  'Dataverse',
-  'Supabase',
-  'RAG',
-  'Python',
-  'TypeScript',
-  'React.js',
-  'Next.js',
-  'Node.js',
-  'Java',
-  'Spring Boot',
-  'Vue.js',
-  'MySQL',
-  'Docker',
-  'Jenkins',
+export const skillCategoriesData = [
+  {
+    id: 'skillCategory1',
+    icon: React.createElement(LuBrain),
+    skills: [
+      'Artificial Intelligence (AI)',
+      'Copilot Studio',
+      'Azure AI Foundry',
+      'RAG',
+      'Document Understanding',
+      'Prompt Engineering',
+    ],
+  },
+  {
+    id: 'skillCategory2',
+    icon: React.createElement(LuCloud),
+    skills: [
+      'Microsoft Azure',
+      'Power Platform',
+      'Dataverse',
+      'Azure Blob Storage',
+      'Cosmos DB',
+      'SharePoint',
+    ],
+  },
+  {
+    id: 'skillCategory3',
+    icon: React.createElement(LuCode2),
+    skills: ['TypeScript', 'React.js', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Startup Development'],
+  },
+  {
+    id: 'skillCategory4',
+    icon: React.createElement(LuDatabase),
+    skills: ['Python', 'Node.js', 'Java', 'Spring Boot', 'Supabase', 'MySQL'],
+  },
+  {
+    id: 'skillCategory5',
+    icon: React.createElement(LuWorkflow),
+    skills: ['Docker', 'Jenkins', 'REST APIs', 'CI/CD', 'Google Lighthouse', 'Code Review'],
+  },
 ] as const;

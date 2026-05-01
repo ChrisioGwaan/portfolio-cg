@@ -99,6 +99,27 @@
 
   "Skills": "技能",
   "skills": "技能",
+  "skillsIntro": "这里按照实际工作场景整理我常用的技术能力，方便快速了解我如何构建 AI 辅助产品、云端流程和可维护的软件系统。",
+  "skillCategory1": {
+    "title": "AI 与自动化",
+    "description": "应用型 AI、Copilot、RAG 和文档理解相关流程。"
+  },
+  "skillCategory2": {
+    "title": "云端与 Microsoft 平台",
+    "description": "用于企业自动化与数据流转的 Azure 和 Power Platform 工具。"
+  },
+  "skillCategory3": {
+    "title": "产品与前端",
+    "description": "面向用户的界面开发、产品迭代与 Web 体验。"
+  },
+  "skillCategory4": {
+    "title": "后端与数据",
+    "description": "覆盖产品系统中的 API、服务、数据库和应用逻辑。"
+  },
+  "skillCategory5": {
+    "title": "工程工作流",
+    "description": "让项目更容易审查、测试、交付和持续改进的工程实践。"
+  },
 
   "Photography": "分享图片库",
   "photography": "分享图片库",

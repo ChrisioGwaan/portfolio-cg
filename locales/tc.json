@@ -99,6 +99,27 @@
 
   "Skills": "技能",
   "skills": "技能",
+  "skillsIntro": "呢度按實際工作場景整理我常用嘅技術能力，方便快速了解我點樣構建 AI 輔助產品、雲端流程同可維護嘅軟件系統。",
+  "skillCategory1": {
+    "title": "AI 同自動化",
+    "description": "應用型 AI、Copilot、RAG 同文檔理解相關流程。"
+  },
+  "skillCategory2": {
+    "title": "雲端同 Microsoft 平台",
+    "description": "用於企業自動化同數據流轉嘅 Azure 同 Power Platform 工具。"
+  },
+  "skillCategory3": {
+    "title": "產品同前端",
+    "description": "面向用戶嘅界面開發、產品迭代同 Web 體驗。"
+  },
+  "skillCategory4": {
+    "title": "後端同數據",
+    "description": "覆蓋產品系統中嘅 API、服務、數據庫同應用邏輯。"
+  },
+  "skillCategory5": {
+    "title": "工程工作流",
+    "description": "令項目更容易審查、測試、交付同持續改進嘅工程實踐。"
+  },
 
   "Photography": "分享相簿",
   "photography": "分享相簿",
