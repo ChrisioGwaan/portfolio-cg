@@ -27,9 +27,8 @@
   "About": "About",
   "about": "About",
   "aboutTitle": "About Me",
-  "aboutDescription1": "I’m a software engineer experienced in building cloud-based, AI-driven solutions, especially around document understanding, automation, and practical copilots that help teams work faster and smarter.",
-  "aboutDescription2": "I enjoy turning messy real-world problems into clean systems: reliable pipelines, clear data models, and user-friendly experiences. My work has strengthened my engineering fundamentals, collaboration habits, and curiosity for new tools.",
-  "aboutDescription3": "Outside of work, I like exploring new tech trends, refining side projects, cycling, and riding e-bikes or motorcycles. I’m focused on deepening my expertise in advanced software engineering and modern AI, from applied LLM systems to stronger computer science foundations.",
+  "aboutIntro": "I work mostly on full-stack systems and AI-adjacent tooling, building AI agents and improving their capability and performance. I care more about software people actually use than software that just looks good in a slide.",
+  "aboutPersonalNote": "Outside work, I’m usually on a bicycle or motorbike, tinkering with a side project, or trying out whatever new tech caught my eye that week.",
 
   "Education": "Education",
   "education": "Education",

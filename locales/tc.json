@@ -27,9 +27,8 @@
   "About": "關於",
   "about": "關於",
   "aboutTitle": "個人簡介",
-  "aboutDescription1": "我係一名軟件工程師，有構建雲端同 AI 驅動解決方案嘅經驗，尤其關注文檔理解、自動化流程，以及可以幫團隊更快更聰明咁工作嘅實用 Copilot 系統。",
-  "aboutDescription2": "我鍾意將混亂嘅現實問題整理成清晰可靠嘅軟件系統：穩定嘅處理流程、明確嘅數據模型，同埋友好嘅用戶體驗。呢啲經歷亦持續強化我嘅工程基礎、協作習慣同對新工具嘅好奇心。",
-  "aboutDescription3": "工作之外，我鍾意留意新技術趨勢、打磨自己嘅 side project，亦會透過踩單車、電助力車或者電單車放鬆同保持狀態。接落嚟我會繼續深入高階軟件工程同現代 AI，包括應用型 LLM 系統同更扎實嘅計算機科學基礎。",
+  "aboutIntro": "平時主要做全栈系統同 AI 相關嘅工具，也會整 AI agent、打磨佢嘅能力同性能。比起喺 slide 上面睇落好睇，我更在意樣嘢係咪真係有人用緊。",
+  "aboutPersonalNote": "放工之後通常喺單車或者電單車上面搵到我，要唔係喺度搞 side project，就係試緊最近睇上眼嘅新嘢。",
 
   "Education": "Education",
   "education": "Education",

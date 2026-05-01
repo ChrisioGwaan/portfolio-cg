@@ -15,7 +15,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-justify leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40"
       variants={sectionReveal}
       initial="hidden"
       whileInView="visible"
@@ -23,15 +23,9 @@ export default function About() {
       id="about"
     >
       <SectionHeading>{t('aboutTitle')}</SectionHeading>
-      <p>{t('aboutDescription1')}</p>
 
-      <br />
-
-      <p>{t('aboutDescription2')}</p>
-
-      <br />
-
-      <p>{t('aboutDescription3')}</p>
+      <p className="text-gray-700 dark:text-white/80">{t('aboutIntro')}</p>
+      <p className="mt-4 text-gray-700 dark:text-white/80">{t('aboutPersonalNote')}</p>
     </motion.section>
   );
 }

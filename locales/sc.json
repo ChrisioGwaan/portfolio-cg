@@ -27,9 +27,8 @@
   "About": "关于",
   "about": "关于",
   "aboutTitle": "个人语录",
-  "aboutDescription1": "我是一名软件工程师，具备构建云端与 AI 驱动解决方案的经验，尤其关注文档理解、自动化流程，以及能够帮助团队更高效工作的实用型 Copilot 系统。",
-  "aboutDescription2": "我喜欢把复杂、混乱的现实问题整理成清晰可靠的软件系统：稳定的处理流程、明确的数据模型，以及友好的用户体验。这些经历也持续强化了我的工程基础、协作习惯和对新技术的好奇心。",
-  "aboutDescription3": "工作之外，我喜欢关注新的技术趋势、打磨自己的 side project，也会通过骑行、电助力车或摩托车来放松和保持状态。接下来我会继续深入高级软件工程与现代 AI，包括应用型 LLM 系统和更扎实的计算机科学基础。",
+  "aboutIntro": "平时主要做全栈系统和 AI 相关的工具，也会构建 AI agent、打磨它们的能力和性能。比起在 slide 上好看，我更在意东西有没有人真的在用。",
+  "aboutPersonalNote": "下了班通常能在单车或机车上找到我，要么在折腾 side project，要么在试最近看上眼的新技术。",
 
   "Education": "Education",
   "education": "Education",
