@@ -1,6 +1,6 @@
 import Header from '@/components/header';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Geist, Inter } from 'next/font/google';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/components/footer';
 import ThemeSwitch from '@/components/theme-switch';
@@ -10,7 +10,8 @@ import { Analytics } from '@vercel/analytics/next';
 import LanguageSwitch from '@/components/language-switch';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const inter = Inter({ subsets: ['latin'] });
+const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
   title: 'Chrisio Gwaan Portoflio',
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.className} overflow-x-hidden bg-gray-50 text-gray-950 relative pt-24 md:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${geist.variable} ${inter.variable} overflow-x-hidden bg-gray-50 text-gray-950 relative pt-24 md:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

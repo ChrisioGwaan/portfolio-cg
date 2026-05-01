@@ -13,8 +13,8 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
-      <Education />
       <Experience />
+      <Education />
       <div className="self-stretch w-full max-w-screen-xl mx-auto">
         <Projects />
       </div>
