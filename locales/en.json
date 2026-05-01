@@ -27,59 +27,71 @@
   "About": "About",
   "about": "About",
   "aboutTitle": "About Me",
-  "aboutDescription1": "Software Engineer with experience in designing, monitoring, operating, and maintaining software systems tailored to diverse business requirements. My expertise lies particularly in developing secure and efficient microservices, leveraging cloud native solutions, and orchestrating streamlined project workflows through Jenkins CI/CD pipelines.",
-  "aboutDescription2": "Recently, I have been expanding my skillset by integrating advanced and trending AI models into software solutions, enhancing user interaction and system capabilities through pioneering technologies.",
-  "aboutDescription3": "Outside of work, my curiosity drives me toward mathematical research, riding adventures, and delving deep into historical documentary. I believe in a growth mindset, continually seeking challenges and opportunities for learning, both in and out of the workplace. Dedication and curiosity are central to my philosophy, applying my approach to all aspects of life.",
+  "aboutDescription1": "I’m a software engineer experienced in building cloud-based, AI-driven solutions, especially around document understanding, automation, and practical copilots that help teams work faster and smarter.",
+  "aboutDescription2": "I enjoy turning messy real-world problems into clean systems: reliable pipelines, clear data models, and user-friendly experiences. My work has strengthened my engineering fundamentals, collaboration habits, and curiosity for new tools.",
+  "aboutDescription3": "Outside of work, I like exploring new tech trends, refining side projects, cycling, and riding e-bikes or motorcycles. I’m focused on deepening my expertise in advanced software engineering and modern AI, from applied LLM systems to stronger computer science foundations.",
 
   "Education": "Education",
   "education": "Education",
   "education1": {
-    "title": "Master of Software Engineering",
+    "title": "Master of Engineering - MEng, Computer Software Engineering",
     "location": "The University of Melbourne",
-    "description": "Pursuing advanced study in software engineering, with a focus on modern software architecture, engineering practice, and scalable system development.",
+    "description": "",
     "date": "2026 MAR. - 2027 NOV. (EXPECTED)",
     "status": "In Progress"
   },
   "education2": {
-    "title": "Bachelor of Software Engineering",
+    "title": "Bachelor's Degree, Computer Software Engineering",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
-    "description": "During my studies, I gained a solid foundation in software engineering principles and practices. What makes software engineering special is its emphasis on real, industry-based projects that cover the entire software development lifecycle. Although software engineering is part of the broader engineering discipline, RMIT University offers this degree through the School of Computing Technologies. As a result, at the time I received my Graduate Certificate, the degree was accredited by the Australian Computer Society (ACS).",
-    "date": "2021 FEB. - 2024 DEC.",
+    "description": "",
+    "date": "2021 MAR. - 2024 NOV.",
     "status": "Completed"
   },
   "education3": {
-    "title": "Foundation Study in Science Engineering and Health",
+    "title": "Foundation Degree, Science Engineering and Health",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
-    "description": "The Foundation Studies program at RMIT University is designed to prepare students for undergraduate study. I focused primarily on advanced mathematics and physics, achieving GPA 4 out of 4 in all related subjects while developing strong analytical and problem-solving skills in an English-speaking academic environment.",
-    "date": "2020 FEB. - 2020 DEC.",
+    "description": "",
+    "date": "2020 MAR. - 2020 NOV.",
     "status": "Completed"
   },
 
   "Experience": "Experience",
   "experience": "Experience",
   "experience1": {
+    "title": "Co-Founder & Software Engineer",
+    "location": "DeepSesh",
+    "description": "Co-founding and engineering the product from early-stage generated code into a clearer, more maintainable platform. Reconstructed Supabase database design and row-level security, improved API data request efficiency by around 40%, advised on frontend design, and used Lighthouse, Codex, Claude Code, and engineering review practices to improve performance, structure, and product quality.",
+    "date": "2026 MAR. - PRESENT"
+  },
+  "experience2": {
+    "title": "Associate Software Engineer",
+    "location": "Bamboo Technologies",
+    "description": "Worked on enterprise AI and Copilot Studio projects for document understanding, policy assistance, customer persona generation, and invoice automation. Built RAG pipelines with Azure Blob Storage, Cosmos DB, Python services, SharePoint, Dataverse, Azure Content Understanding, and AI Foundry, while completing Power Platform training aligned with PL-900 and PL-400.",
+    "date": "2025 JUN. - 2026 JAN."
+  },
+  "experience3": {
     "title": "Tutor",
     "location": "Tutor Lim",
     "description": "Conduct online or in-person tutoring sessions to university students, assisting them with assignments and homework. This includes offering study tips and guidance to help them understand and resolve problems and complete their tasks effectively.",
-    "date": "2023 MAY. - PRESENT"
+    "date": "2023 MAY. - 2025 MAY."
   },
-  "experience2": {
+  "experience4": {
     "title": "Software Development Intern",
     "location": "Total Game Development",
     "description": "Contributed to the development of new gameplay features for the open source C++ game War of Salvation, enhancing player experience and game functionality. Identified and resolved memory management issues, including pointer related bugs and memory leaks in the Ship unit system, improving stability.",
     "date": "2024 DEC. - 2025 MAR."
   },
-  "experience3": {
+  "experience5": {
     "title": "Back End Developer",
     "location": "ABC Academy of Music",
     "description": "Engineered Java-based microservices architecture using Spring Boot and JPA to improve backend modularity and scalability. Established Jenkins CI/CD pipelines, streamlining deployments and reducing downtime significantly. Resolved over 30 functional, logical, and security issues through Agile sprints, ensuring robust application performance.",
     "date": "2024 JUL. - 2024 NOV."
   },
-  "experience4": {
+  "experience6": {
     "title": "Software Engineer Intern",
     "location": "Guangdong Provincial Academy of Building Research Group Co.Ltd",
-    "description": "Developed Customer Relationship Management (CRM) software system using Spring Boot backend and Vue.js frontend, providing customers with a platform to effectively manage data, interactions, and activities, resulting in enhanced customer service.",
-    "date": "2023 JULY. - 2024 MAY."
+    "description": "Developed CRM and SaaS software using Spring Boot, Vue.js, REST APIs, MySQL, Pig4Cloud, MyBatis Plus, Alibaba Nacos, Docker, and Jenkins CI/CD. Wrote API documentation, debugged Java and JavaScript issues, and collaborated through Chandao to support customer data, interaction, and activity management.",
+    "date": "2023 JUL. - 2024 MAY."
   },
 
   "Projects": "Projects",

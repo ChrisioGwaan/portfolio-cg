@@ -27,59 +27,71 @@
   "About": "關於",
   "about": "關於",
   "aboutTitle": "個人簡介",
-  "aboutDescription1": "歡迎嚟到我個人網站，簡單介紹下自己。我係嚟自中國廣州嘅軟件工程師，同時都係編程愛好者。擁有設計、監控、營運同維護多元化業務需求嘅軟件系統經驗。專長於開發安全高效嘅微服務架構，靈活應用雲原生解決方案，並透過 Jenkins CI/CD 流水線優化項目開發同部署流程，提升系統嘅模組化、可持續性同可擴展性。",
-  "aboutDescription2": "最近我透過唔同線上資源同平台不斷拓展自己技能，將先進同熱門嘅 AI 模型應用喺現有嘅軟件解決方案上，包括我自家開發嘅 SaaS 管理平台等，利用前沿技術提升用戶互動體驗同系統能力。",
-  "aboutDescription3": "除咗工作，我都鍾意鑽研數學理論、玩電單車環遊同發掘歷史紀錄片同唔同國家嘅文化。我一直秉持住成長型思維，持續喺工作同生活中尋求挑戰同學習機會。專注、堅持同好奇心係我人生核心信念，並應用喺生活各方面。如果有興趣，歡迎隨時聯絡我！",
+  "aboutDescription1": "我係一名軟件工程師，有構建雲端同 AI 驅動解決方案嘅經驗，尤其關注文檔理解、自動化流程，以及可以幫團隊更快更聰明咁工作嘅實用 Copilot 系統。",
+  "aboutDescription2": "我鍾意將混亂嘅現實問題整理成清晰可靠嘅軟件系統：穩定嘅處理流程、明確嘅數據模型，同埋友好嘅用戶體驗。呢啲經歷亦持續強化我嘅工程基礎、協作習慣同對新工具嘅好奇心。",
+  "aboutDescription3": "工作之外，我鍾意留意新技術趨勢、打磨自己嘅 side project，亦會透過踩單車、電助力車或者電單車放鬆同保持狀態。接落嚟我會繼續深入高階軟件工程同現代 AI，包括應用型 LLM 系統同更扎實嘅計算機科學基礎。",
 
   "Education": "Education",
   "education": "Education",
   "education1": {
-    "title": "軟件工程碩士",
+    "title": "工程碩士 - 軟件工程方向",
     "location": "墨爾本大學 - The University of Melbourne",
-    "description": "正在攻讀軟件工程碩士學位，重點學習現代軟件架構、工程實踐以及可擴展系統開發。",
+    "description": "",
     "date": "2026年3月 - 預計2027年11月",
     "status": "進行中"
   },
   "education2": {
-    "title": "軟件工程學士",
+    "title": "學士學位 - 軟件工程方向",
     "location": "皇家墨爾本理工大學 - RMIT University",
-    "description": "過程中，我掌握了扎實的軟件工程原則和實踐基礎。軟件工程的特殊之處在於它強調真實的、基於行業的項目，涵蓋整個軟件開發生命周期。儘管軟件工程是更廣泛的工程學科的一部分，但皇家墨爾本理工大學將該學位納入計算技術學院。因此，在我獲得研究生證書時，該學位已獲得澳大利亞計算機協會（ACS）的認證。",
-    "date": "2021年2月 - 2024年12月",
+    "description": "",
+    "date": "2021年3月 - 2024年11月",
     "status": "已完成"
   },
   "education3": {
-    "title": "基礎課程 - 科學、工程與健康",
+    "title": "預科課程 - 科學、工程與健康方向",
     "location": "皇家墨爾本理工大學 - RMIT University",
-    "description": "皇家墨爾本理工大學的基礎課程旨在為學生的本科學習做好準備。我主要專注於高等數學和物理，所有相關科目的GPA均為4分（滿分4分），同時在英語學術環境中培養了強大的分析和解決問題的能力。",
-    "date": "2020年2月 - 2020年12月",
+    "description": "",
+    "date": "2020年3月 - 2020年11月",
     "status": "已完成"
   },
 
   "Experience": "學歷同工作經驗",
   "experience": "學歷同工作經驗",
   "experience1": {
-    "title": "Tutor",
-    "location": "Tutor Lim",
-    "description": "为大學生提供線上或線下輔導課程，協助他们完成作業和課題。這包括提供學習技巧和指導，幫助他們理解和解決問題，並有效完成任務。",
-    "date": "2023 MAY. - PRESENT"
+    "title": "聯合創始人 / Software Engineer",
+    "location": "DeepSesh",
+    "description": "作為聯合創始人參與產品工程建設，將早期由生成式代碼堆出嚟嘅系統整理成更清晰、更易維護嘅平台。重構 Supabase 數據庫設計同 row-level security，使 Function API 數據請求效率提升約 40%，同時參與前端體驗建議，並結合 Lighthouse、Codex、Claude Code 同工程化 code review 改進性能、結構同產品質量。",
+    "date": "2026年3月 - 至今"
   },
   "experience2": {
-    "title": "Software Development Intern",
-    "location": "Total Game Development",
-    "description": "为開源C++遊戲《War of Salvation》開發新遊戲玩法特性，提升玩家體驗和遊戲功能。識別並解決內存管理問題，包括指針相關的錯誤和Ship單元系統中的內存泄漏，改善穩定性。",
-    "date": "2024 DEC. - 2025 MAR."
+    "title": "Associate Software Engineer",
+    "location": "Bamboo Technologies",
+    "description": "參與企業級 AI 同 Copilot Studio 項目，覆蓋文檔理解、政策問答、客戶画像生成同發票自動化等場景。使用 Azure Blob Storage、Cosmos DB、Python 服務、SharePoint、Dataverse、Azure Content Understanding 同 AI Foundry 構建 RAG 同自動化流程，並完成對齊 PL-900 / PL-400 嘅 Power Platform 培訓。",
+    "date": "2025年6月 - 2026年1月"
   },
   "experience3": {
+    "title": "Tutor",
+    "location": "Tutor Lim",
+    "description": "為大學生提供線上或線下輔導課程，協助佢哋完成作業同課題。當中包括提供學習技巧同指導，幫助佢哋理解問題、解決問題，並有效完成任務。",
+    "date": "2023年5月 - 2025年5月"
+  },
+  "experience4": {
+    "title": "Software Development Intern",
+    "location": "Total Game Development",
+    "description": "為開源 C++ 遊戲《War of Salvation》開發新玩法功能，提升玩家體驗同遊戲功能。識別並解決內存管理問題，包括指針相關錯誤同 Ship 單元系統中嘅 memory leak，改善穩定性。",
+    "date": "2024年12月 - 2025年3月"
+  },
+  "experience5": {
     "title": "Back End Developer",
     "location": "ABC Academy of Music",
     "description": "基於 Java，使用 Spring Boot 同 JPA 設計同實現微服務架構，顯著提升後端模組化同可擴展性。搭建 Jenkins CI/CD 流水線，優化部署流程，大幅減少系統停機時間。透過敏捷開發（Agile Sprint）修復超過30個功能、邏輯同安全問題，確保系統穩定同高效運行。",
-    "date": "2024 JUL. - 2024 NOV."
+    "date": "2024年7月 - 2024年11月"
   },
-  "experience4": {
+  "experience6": {
     "title": "Software Engineer Intern",
     "location": "Guangdong Provincial Academy of Building Research Group Co.Ltd",
-    "description": "基于 Spring Boot 同 Vue.js 開發客戶關係管理（CRM）系統，為客戶提供高效管理數據、互動同業務活動的平臺，顯著提升客戶服務質量。",
-    "date": "2023 JULY. - 2024 MAY."
+    "description": "使用 Spring Boot、Vue.js、REST API、MySQL、Pig4Cloud、MyBatis Plus、Alibaba Nacos、Docker 同 Jenkins CI/CD 參與 CRM 同 SaaS 系統開發。編寫接口文檔，排查 Java 同 JavaScript 問題，並透過禪道協作支援客戶數據、互動同業務活動管理。",
+    "date": "2023年7月 - 2024年5月"
   },
 
   "Projects": "項目經驗",
