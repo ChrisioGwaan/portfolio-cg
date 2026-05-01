@@ -76,13 +76,13 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="mb-3 inline-flex rounded-full border border-[#8cfa9e]/60 bg-[#8cfa9e]/15 px-4 py-1.5 text-sm font-semibold text-[#0f7f18] dark:border-[#8cfa9e]/30 dark:bg-[#8cfa9e]/10 dark:text-[#8cfa9e]">
-              {t('homeCareerTitle')}
-            </p>
-
             <h1 className="text-balance text-3xl font-semibold leading-tight text-gray-950 dark:text-white sm:text-4xl md:text-5xl">
               {t('homeTitle')}
             </h1>
+
+            <p className="mt-3 text-base font-medium tracking-wide text-[#0f7f18] dark:text-[#8cfa9e] sm:text-lg">
+              {t('homeCareerTitle')}
+            </p>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-700 dark:text-white/70 md:mx-0 sm:text-lg">
               {t('homeSubTitle1')}
