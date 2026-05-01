@@ -60,9 +60,7 @@ export default function Contact() {
     >
       <SectionHeading>{t('contactTitle')}</SectionHeading>
 
-      <p className="mx-auto max-w-xl text-gray-700 dark:text-white/80">
-        {t('contactIntro')}
-      </p>
+      <p className="mx-auto max-w-xl text-gray-700 dark:text-white/80">{t('contactIntro')}</p>
 
       <ul className="mt-8 grid gap-3 sm:grid-cols-3">
         {contactLinks.map(item => {
@@ -119,4 +117,3 @@ export default function Contact() {
     </motion.section>
   );
 }
-
