@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
@@ -12,9 +12,11 @@ import '../lib/i18n';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeMarker, setActiveMarker] = useState({ left: 0, width: 0, opacity: 0 });
   const menuRef = useRef<HTMLDivElement>(null);
+  const desktopListRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -29,6 +31,36 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [menuOpen]);
+
+  useLayoutEffect(() => {
+    const updateActiveMarker = () => {
+      const activeLink = desktopListRef.current?.querySelector<HTMLElement>(
+        `[data-section-id="${activeSection}"]`
+      );
+
+      if (!activeLink || !desktopListRef.current) {
+        setActiveMarker(marker => ({ ...marker, opacity: 0 }));
+        return;
+      }
+
+      const linkRect = activeLink.getBoundingClientRect();
+      const listRect = desktopListRef.current.getBoundingClientRect();
+
+      setActiveMarker({
+        left: linkRect.left - listRect.left + desktopListRef.current.scrollLeft,
+        width: linkRect.width,
+        opacity: 1,
+      });
+    };
+
+    const animationFrame = window.requestAnimationFrame(updateActiveMarker);
+    window.addEventListener('resize', updateActiveMarker);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('resize', updateActiveMarker);
+    };
+  }, [activeSection, i18n.language]);
 
   return (
     <>
@@ -87,15 +119,28 @@ export default function Header() {
         ></motion.div>
 
         <nav className="fixed left-1/2 top-[1.7rem] flex h-[initial] w-[calc(100%-2rem)] max-w-[48rem] -translate-x-1/2 overflow-x-auto py-0">
-          <ul className="mx-auto flex min-w-max flex-nowrap items-center justify-center gap-3 text-[0.9rem] font-medium text-gray-500 lg:gap-5">
+          <ul
+            ref={desktopListRef}
+            className="relative mx-auto flex min-w-max flex-nowrap items-center justify-center gap-3 text-[0.9rem] font-medium text-gray-500 lg:gap-5"
+          >
+            <motion.span
+              className="pointer-events-none absolute inset-y-0 rounded-full bg-green-100 dark:bg-gray-800"
+              animate={activeMarker}
+              transition={{
+                type: 'spring',
+                stiffness: 360,
+                damping: 34,
+              }}
+            />
             {links.map(link => (
               <motion.li
-                className="h-3/4 flex items-center justify-center relative"
+                className="relative z-10 h-3/4 flex items-center justify-center"
                 key={link.hash}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
                 <Link
+                  data-section-id={link.id}
                   className={clsx(
                     'flex w-full items-center justify-center px-3 py-3 hover:text-[#8cfa9e] transition dark:text-gray-300 dark:hover:text-[#8cfa9e]',
                     {
@@ -109,18 +154,6 @@ export default function Header() {
                   }}
                 >
                   {t(link.name)}
-
-                  {link.id === activeSection && (
-                    <motion.span
-                      className="bg-green-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                      layoutId="activeSection"
-                      transition={{
-                        type: 'spring',
-                        stiffness: 220,
-                        damping: 30,
-                      }}
-                    ></motion.span>
-                  )}
                 </Link>
               </motion.li>
             ))}

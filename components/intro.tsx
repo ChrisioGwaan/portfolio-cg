@@ -18,7 +18,7 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = ({ href, title, children }) => (
   <a
-    className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-700 transition hover:text-gray-950 focus:scale-[1.08] hover:scale-[1.08] active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 sm:h-14 sm:w-14"
+    className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:text-gray-950 focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2 active:translate-y-0 dark:border-white/10 dark:bg-white/10 dark:text-white/70"
     href={href}
     target="_blank"
     title={title}
@@ -36,7 +36,7 @@ interface DownloadCVButtonProps {
 
 const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label }) => (
   <a
-    className="group flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-base outline-none transition focus:scale-105 hover:scale-105 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 sm:px-7"
+    className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-gray-950 px-5 py-3 text-sm font-semibold text-white shadow-sm outline-none transition hover:-translate-y-0.5 hover:bg-gray-800 focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2 active:translate-y-0 dark:border-white/10 dark:bg-white dark:text-gray-950 dark:hover:bg-gray-200 sm:px-6"
     href={href}
     title={title}
     download
@@ -52,83 +52,82 @@ export default function Intro() {
 
   return (
     <>
-      <section
-        ref={ref}
-        id="home"
-        className="mb-24 w-full max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
-      >
-        <div className="flex items-center justify-center">
+      <section ref={ref} id="home" className="mb-24 w-full max-w-5xl scroll-mt-[100rem] sm:mb-0">
+        <div className="grid items-center gap-8 text-center md:grid-cols-[15rem_1fr] md:text-left">
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: 'tween', duration: 0.2 }}
+            className="mx-auto md:mx-0"
+            initial={{ opacity: 0, y: 20, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
             <Image
               src="/images/avatar2.jpg"
-              alt="Weixi_Guan"
-              width={1920}
-              height={1080}
+              alt="Weixi Guan"
+              width={360}
+              height={360}
               quality={95}
               priority
-              className="h-32 w-32 rounded-full object-cover border-[0.3rem] border-[#8cfa9e] shadow-xl sm:h-40 sm:w-40 sm:border-[0.35rem]"
+              className="h-36 w-36 rounded-2xl border border-black/10 object-cover shadow-xl dark:border-white/10 sm:h-44 sm:w-44 md:h-56 md:w-56"
             />
           </motion.div>
-        </div>
 
-        <motion.h1
-          className="mb-8 mt-4 px-1 text-xl font-medium !leading-[1.55] sm:mb-10 sm:px-4 sm:text-2xl"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <span className="font-bold">{t('homeTitle')}</span> {t('homeSubTitle1')}
-          <span className="font-bold">{t('homeSubTitle2')}</span> {t('homeSubTitle3')}
-          <span className="font-bold">{t('homeSubTitle4')}</span> {t('homeSubTitle5')}
-          <span className="font-bold">{t('homeSubTitle6')}</span>{' '}
-          <span className="underline">{t('homeSubTitle7')}</span>{' '}
-        </motion.h1>
-
-        <motion.div
-          className="flex flex-wrap items-center justify-center gap-2 px-1 text-base font-medium sm:px-4 sm:text-lg"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          <DownloadCVButton href="/CV-EN.pdf" title={t('homeCVDownload')} label={t('homeCV-EN')} />
-          {i18next.language !== 'en' && (
-            <DownloadCVButton
-              href="/CV-CN.pdf"
-              title={t('homeCVDownload')}
-              label={t('homeCV-CN')}
-            />
-          )}
-        </motion.div>
-
-        <motion.div
-          className="mt-4 flex flex-wrap items-center justify-center gap-2 px-1 text-lg font-medium sm:px-4"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          <SocialLink href="https://www.linkedin.com/in/weixi-guan" title={t('homeLinkedin')}>
-            <LuLinkedin />
-          </SocialLink>
-
-          <SocialLink href="https://github.com/ChrisioGwaan" title={t('homeGitHub')}>
-            <LuGithub />
-          </SocialLink>
-
-          <button
-            onClick={() => setShowWechat(true)}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-700 transition hover:text-gray-950 focus:scale-[1.08] hover:scale-[1.08] active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 sm:h-14 sm:w-14"
-            title={t('homeWeChat')}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <TbBrandWechat />
-          </button>
+            <p className="mb-3 inline-flex rounded-full border border-[#8cfa9e]/60 bg-[#8cfa9e]/15 px-4 py-1.5 text-sm font-semibold text-[#0f7f18] dark:border-[#8cfa9e]/30 dark:bg-[#8cfa9e]/10 dark:text-[#8cfa9e]">
+              {t('homeCareerTitle')}
+            </p>
 
-          <SocialLink href="mailto:chris322322@gmail.com" title={t('homeEmailContact')}>
-            <LuMail />
-          </SocialLink>
-        </motion.div>
+            <h1 className="text-balance text-3xl font-semibold leading-tight text-gray-950 dark:text-white sm:text-4xl md:text-5xl">
+              {t('homeTitle')}
+            </h1>
+
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-700 dark:text-white/70 md:mx-0 sm:text-lg">
+              {t('homeSubTitle1')}
+            </p>
+
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row md:items-start">
+              <div className="flex flex-wrap justify-center gap-2 md:justify-start">
+                <DownloadCVButton
+                  href="/CV-EN.pdf"
+                  title={t('homeCVDownload')}
+                  label={t('homeCV-EN')}
+                />
+                {i18next.language !== 'en' && (
+                  <DownloadCVButton
+                    href="/CV-CN.pdf"
+                    title={t('homeCVDownload')}
+                    label={t('homeCV-CN')}
+                  />
+                )}
+              </div>
+
+              <div className="flex items-center justify-center gap-2 md:justify-start">
+                <SocialLink href="https://www.linkedin.com/in/weixi-guan" title={t('homeLinkedin')}>
+                  <LuLinkedin />
+                </SocialLink>
+
+                <SocialLink href="https://github.com/ChrisioGwaan" title={t('homeGitHub')}>
+                  <LuGithub />
+                </SocialLink>
+
+                <button
+                  onClick={() => setShowWechat(true)}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:text-gray-950 focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2 active:translate-y-0 dark:border-white/10 dark:bg-white/10 dark:text-white/70"
+                  title={t('homeWeChat')}
+                >
+                  <TbBrandWechat />
+                </button>
+
+                <SocialLink href="mailto:chris322322@gmail.com" title={t('homeEmailContact')}>
+                  <LuMail />
+                </SocialLink>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       <AnimatePresence>

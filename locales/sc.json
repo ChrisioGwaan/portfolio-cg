@@ -4,14 +4,15 @@
 
   "Home": "主页",
   "home": "主页",
-  "homeTitle": "Hi，我是关炜熙，我的英文名字是Chrisio Gwaan。",
-  "homeSubTitle1": "我是一名",
-  "homeSubTitle2": "全栈软件工程师。",
-  "homeSubTitle3": "我现在拥有 ",
-  "homeSubTitle4": "1年以上",
-  "homeSubTitle5": "的专业经验。我喜欢构建",
-  "homeSubTitle6": "网站和应用程序。我的技术重点是",
-  "homeSubTitle7": "使用Spring Boot和Java。",
+  "homeTitle": "Chrisio Gwaan",
+  "homeCareerTitle": "软件工程师",
+  "homeSubTitle1": "Engineering the software",
+  "homeSubTitle2": "",
+  "homeSubTitle3": "",
+  "homeSubTitle4": "",
+  "homeSubTitle5": "",
+  "homeSubTitle6": "",
+  "homeSubTitle7": "",
   "homeCV-EN": "CV(英文版)",
   "homeCV-CN": "CV(中文版)",
   "homeCVDownload": "下载我的专业简历",
@@ -33,13 +34,20 @@
   "Education": "Education",
   "education": "Education",
   "education1": {
+    "title": "软件工程硕士",
+    "location": "墨尔本大学 - The University of Melbourne",
+    "description": "正在攻读软件工程硕士学位，重点学习现代软件架构、工程实践以及可扩展系统开发。",
+    "date": "2026年3月 - 预计2027年11月",
+    "status": "进行中"
+  },
+  "education2": {
     "title": "软件工程学士",
     "location": "皇家墨尔本理工大学 - RMIT University",
     "description": "过程中，我掌握了扎实的软件工程原则和实践基础。软件工程的特殊之处在于它强调真实的、基于行业的项目，涵盖整个软件开发生命周期。尽管软件工程是更广泛的工程学科的一部分，但皇家墨尔本理工大学将该学位纳入计算技术学院。因此，在我获得研究生证书时，该学位已获得澳大利亚计算机协会（ACS）的认证。",
     "date": "2021年2月 - 2024年12月",
     "status": "已完成"
   },
-  "education2": {
+  "education3": {
     "title": "基础课程 - 科学、工程与健康",
     "location": "皇家墨尔本理工大学 - RMIT University",
     "description": "皇家墨尔本理工大学的基础课程旨在为学生的本科学习做好准备。我主要专注于高等数学和物理，所有相关科目的GPA均为4分（满分4分），同时在英语学术环境中培养了强大的分析和解决问题的能力。",

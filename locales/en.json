@@ -4,14 +4,15 @@
 
   "Home": "Home",
   "home": "Home",
-  "homeTitle": "Hi, I'm Weixi Guan, aka Chrisio Gwaan.",
-  "homeSubTitle1": "I'm a ",
-  "homeSubTitle2": "full-stack software developer",
-  "homeSubTitle3": "with ",
-  "homeSubTitle4": "1+ year ",
-  "homeSubTitle5": "of professional experience. I enjoy building ",
-  "homeSubTitle6": "sites & apps. My focus is ",
-  "homeSubTitle7": "Spring Boot with Java.",
+  "homeTitle": "Chrisio Gwaan",
+  "homeCareerTitle": "Software Engineer",
+  "homeSubTitle1": "Engineering the software",
+  "homeSubTitle2": "",
+  "homeSubTitle3": "",
+  "homeSubTitle4": "",
+  "homeSubTitle5": "",
+  "homeSubTitle6": "",
+  "homeSubTitle7": "",
   "homeCV-EN": "CV",
   "homeCV-CN": "CV(Chinese)",
   "homeCVDownload": "Download my resume",
@@ -33,13 +34,20 @@
   "Education": "Education",
   "education": "Education",
   "education1": {
+    "title": "Master of Software Engineering",
+    "location": "The University of Melbourne",
+    "description": "Pursuing advanced study in software engineering, with a focus on modern software architecture, engineering practice, and scalable system development.",
+    "date": "2026 MAR. - 2027 NOV. (EXPECTED)",
+    "status": "In Progress"
+  },
+  "education2": {
     "title": "Bachelor of Software Engineering",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
     "description": "During my studies, I gained a solid foundation in software engineering principles and practices. What makes software engineering special is its emphasis on real, industry-based projects that cover the entire software development lifecycle. Although software engineering is part of the broader engineering discipline, RMIT University offers this degree through the School of Computing Technologies. As a result, at the time I received my Graduate Certificate, the degree was accredited by the Australian Computer Society (ACS).",
     "date": "2021 FEB. - 2024 DEC.",
     "status": "Completed"
   },
-  "education2": {
+  "education3": {
     "title": "Foundation Study in Science Engineering and Health",
     "location": "Royal Melbourne Institute of Technology (RMIT) University",
     "description": "The Foundation Studies program at RMIT University is designed to prepare students for undergraduate study. I focused primarily on advanced mathematics and physics, achieving GPA 4 out of 4 in all related subjects while developing strong analytical and problem-solving skills in an English-speaking academic environment.",

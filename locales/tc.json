@@ -4,14 +4,15 @@
 
   "Home": "主頁",
   "home": "主頁",
-  "homeTitle": "Hi，我係關煒熙，我嘅英文名叫Chrisio Gwaan。",
-  "homeSubTitle1": "我係一名",
-  "homeSubTitle2": "全端軟件工程師。",
-  "homeSubTitle3": "目前擁有",
-  "homeSubTitle4": "超過1年",
-  "homeSubTitle5": "嘅專業經驗。我鍾意開發",
-  "homeSubTitle6": "網站同應用程式。專注於",
-  "homeSubTitle7": "使用 Spring Boot 同 Java。",
+  "homeTitle": "Chrisio Gwaan",
+  "homeCareerTitle": "軟件工程師",
+  "homeSubTitle1": "Engineering the software",
+  "homeSubTitle2": "",
+  "homeSubTitle3": "",
+  "homeSubTitle4": "",
+  "homeSubTitle5": "",
+  "homeSubTitle6": "",
+  "homeSubTitle7": "",
   "homeCV-EN": "CV(英文版)",
   "homeCV-CN": "CV(中文版)",
   "homeCVDownload": "下載我嘅專業履歷",
@@ -33,13 +34,20 @@
   "Education": "Education",
   "education": "Education",
   "education1": {
+    "title": "軟件工程碩士",
+    "location": "墨爾本大學 - The University of Melbourne",
+    "description": "正在攻讀軟件工程碩士學位，重點學習現代軟件架構、工程實踐以及可擴展系統開發。",
+    "date": "2026年3月 - 預計2027年11月",
+    "status": "進行中"
+  },
+  "education2": {
     "title": "軟件工程學士",
     "location": "皇家墨爾本理工大學 - RMIT University",
     "description": "過程中，我掌握了扎實的軟件工程原則和實踐基礎。軟件工程的特殊之處在於它強調真實的、基於行業的項目，涵蓋整個軟件開發生命周期。儘管軟件工程是更廣泛的工程學科的一部分，但皇家墨爾本理工大學將該學位納入計算技術學院。因此，在我獲得研究生證書時，該學位已獲得澳大利亞計算機協會（ACS）的認證。",
     "date": "2021年2月 - 2024年12月",
     "status": "已完成"
   },
-  "education2": {
+  "education3": {
     "title": "基礎課程 - 科學、工程與健康",
     "location": "皇家墨爾本理工大學 - RMIT University",
     "description": "皇家墨爾本理工大學的基礎課程旨在為學生的本科學習做好準備。我主要專注於高等數學和物理，所有相關科目的GPA均為4分（滿分4分），同時在英語學術環境中培養了強大的分析和解決問題的能力。",

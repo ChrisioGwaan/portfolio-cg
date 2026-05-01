@@ -6,15 +6,7 @@ import { useSectionInView } from '@/lib/hooks';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../lib/i18n';
 import { useTranslation } from 'react-i18next';
-
-const fadeInAnimationVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.1 * index },
-  }),
-};
+import { itemReveal, sectionReveal } from '@/lib/animations';
 
 const images = [
   { src: '/images/20250310_153650.jpg', alt: 'Image 1' },
@@ -27,10 +19,14 @@ export default function Photography() {
   const [previewSrc, setPreviewSrc] = useState<string | null>(null);
 
   return (
-    <section
+    <motion.section
       id="photography"
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <SectionHeading>{t('Photography')}</SectionHeading>
 
@@ -42,9 +38,7 @@ export default function Photography() {
             alt={img.alt}
             className="h-auto w-full cursor-pointer rounded-lg shadow-md hover:scale-[1.02] transition"
             custom={index}
-            variants={fadeInAnimationVariants}
-            initial="hidden"
-            animate="visible"
+            variants={itemReveal}
             onClick={() => setPreviewSrc(img.src)}
           />
         ))}
@@ -72,6 +66,6 @@ export default function Photography() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 }
