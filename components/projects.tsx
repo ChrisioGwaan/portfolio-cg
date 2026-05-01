@@ -13,6 +13,7 @@ import { sectionReveal } from '@/lib/animations';
 export default function Projects() {
   const { ref } = useSectionInView('projects');
   const { t } = useTranslation();
+  const sortedProjects = [...projectsData].sort((a, b) => b.sortOrder - a.sortOrder);
 
   return (
     <motion.section
@@ -26,7 +27,7 @@ export default function Projects() {
     >
       <SectionHeading>{t('Projects')}</SectionHeading>
       <div>
-        {projectsData.map(project => (
+        {sortedProjects.map(project => (
           <React.Fragment key={project.title}>
             <Project {...project} />
           </React.Fragment>
