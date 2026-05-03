@@ -5,7 +5,7 @@ import Intro from '@/components/intro';
 import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
-import Photography from '@/components/photography';
+// import Photography from '@/components/photography';
 import Education from '@/components/education';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
         <Projects />
       </div>
       <Skills />
-      <Photography />
+      {/* <Photography /> */}
       <Contact />
     </main>
   );

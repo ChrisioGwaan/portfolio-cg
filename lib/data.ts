@@ -40,11 +40,11 @@ export const links = [
     name: 'Skills',
     hash: '#skills',
   },
-  {
-    id: 'photography',
-    name: 'Photography',
-    hash: '#photography',
-  },
+  // {
+  //   id: 'photography',
+  //   name: 'Photography',
+  //   hash: '#photography',
+  // },
   {
     id: 'contact',
     name: 'Contact',

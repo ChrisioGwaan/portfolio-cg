@@ -65,7 +65,6 @@ export default function Intro() {
               alt="Weixi Guan"
               width={360}
               height={360}
-              quality={95}
               priority
               className="h-36 w-36 rounded-2xl border border-black/10 object-cover shadow-xl dark:border-white/10 sm:h-44 sm:w-44 md:h-56 md:w-56"
             />

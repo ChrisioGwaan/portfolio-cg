@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import SectionHeading from './section-heading';
 import { useSectionInView } from '@/lib/hooks';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +15,7 @@ const images = [
 ];
 
 export default function Photography() {
-  const { ref } = useSectionInView('photography');
+  const { ref } = useSectionInView('photography' as any);
   const { t } = useTranslation();
   const [previewSrc, setPreviewSrc] = useState<string | null>(null);
 
@@ -32,15 +33,21 @@ export default function Photography() {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {images.map((img, index) => (
-          <motion.img
+          <motion.div
             key={img.src}
-            src={img.src}
-            alt={img.alt}
-            className="h-auto w-full cursor-pointer rounded-lg shadow-md hover:scale-[1.02] transition"
+            className="relative aspect-[4/3] w-full cursor-pointer overflow-hidden rounded-lg shadow-md hover:scale-[1.02] transition"
             custom={index}
             variants={itemReveal}
             onClick={() => setPreviewSrc(img.src)}
-          />
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, 50vw"
+            />
+          </motion.div>
         ))}
       </div>
 
@@ -54,15 +61,21 @@ export default function Photography() {
             exit={{ opacity: 0 }}
             onClick={() => setPreviewSrc(null)}
           >
-            <motion.img
-              src={previewSrc}
-              alt="Preview"
-              className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+            <motion.div
+              className="relative w-[90vw] h-[90vh]"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               onClick={e => e.stopPropagation()}
-            />
+            >
+              <Image
+                src={previewSrc}
+                alt="Preview"
+                fill
+                className="object-contain rounded-lg shadow-lg"
+                sizes="90vw"
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
