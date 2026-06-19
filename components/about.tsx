@@ -15,7 +15,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40"
+      className="mb-28 w-full max-w-5xl scroll-mt-28 leading-8 sm:mb-40"
       variants={sectionReveal}
       initial="hidden"
       whileInView="visible"
@@ -24,8 +24,18 @@ export default function About() {
     >
       <SectionHeading>{t('aboutTitle')}</SectionHeading>
 
-      <p className="text-gray-700 dark:text-white/80">{t('aboutIntro')}</p>
-      <p className="mt-4 text-gray-700 dark:text-white/80">{t('aboutPersonalNote')}</p>
+      <div className="grid gap-6 rounded-[8px] border border-black/10 bg-white/72 p-5 shadow-panel backdrop-blur dark:border-white/10 dark:bg-white/[0.05] dark:shadow-panel-dark sm:p-7 md:grid-cols-[13rem_1fr]">
+        <div className="space-y-3 font-mono text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+          <div className="border-l-2 border-[#43f0b3] pl-3">AI-adjacent tooling</div>
+          <div className="border-l-2 border-[#58d7ff] pl-3">Cloud product systems</div>
+          <div className="border-l-2 border-[#e3b253] pl-3">Human-useful software</div>
+        </div>
+
+        <div className="text-left text-base leading-8 text-[var(--muted)] sm:text-lg">
+          <p>{t('aboutIntro')}</p>
+          <p className="mt-4">{t('aboutPersonalNote')}</p>
+        </div>
+      </div>
     </motion.section>
   );
 }
