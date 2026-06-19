@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <Experience />
       <Education />
-      <div className="self-stretch w-full max-w-screen-xl mx-auto">
+      <div className="mx-auto w-full max-w-screen-xl self-stretch">
         <Projects />
       </div>
       <Skills />
