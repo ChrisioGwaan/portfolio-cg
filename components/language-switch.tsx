@@ -4,9 +4,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LuLanguages } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
 import '../lib/i18n';
 
-export default function LanguageSwitch() {
+type LanguageSwitchProps = {
+  compact?: boolean;
+  className?: string;
+};
+
+export default function LanguageSwitch({ compact = false, className }: LanguageSwitchProps) {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -39,7 +45,12 @@ export default function LanguageSwitch() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-[#43f0b3] text-ink shadow-panel backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#58d7ff] active:translate-y-0 dark:border-white/10 dark:bg-[#43f0b3] dark:text-ink"
+        aria-label="Select language"
+        className={clsx(
+          'flex shrink-0 items-center justify-center rounded-full border border-black/10 bg-[#43f0b3] text-ink backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#58d7ff] active:translate-y-0 dark:border-white/10 dark:bg-[#43f0b3] dark:text-ink',
+          compact ? 'h-10 w-10 shadow-sm' : 'h-12 w-12 shadow-panel',
+          className
+        )}
         title="Select Language"
       >
         <LuLanguages className="h-5 w-5" />
@@ -48,7 +59,10 @@ export default function LanguageSwitch() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute bottom-14 right-0 w-36 overflow-hidden rounded-[8px] border border-black/10 bg-white/95 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-[#071016]/95"
+            className={clsx(
+              'absolute right-0 w-36 overflow-hidden rounded-[8px] border border-black/10 bg-white/95 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-[#071016]/95',
+              compact ? 'bottom-12' : 'bottom-14'
+            )}
             initial={{ opacity: 0, y: 15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.95 }}

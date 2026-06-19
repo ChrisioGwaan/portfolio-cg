@@ -144,7 +144,7 @@ export default function Intro() {
               <div className="absolute inset-4 translate-x-4 translate-y-4 border border-[#43f0b3]/55 dark:border-[#58d7ff]/45" />
               <div className="relative overflow-hidden rounded-[8px] border border-black/10 bg-ink p-2 shadow-panel dark:border-white/10 dark:bg-white/10 dark:shadow-panel-dark">
                 <Image
-                  src="/images/avatar2.jpg"
+                  src="/images/avatar.jpg"
                   alt="Weixi Guan"
                   width={440}
                   height={520}

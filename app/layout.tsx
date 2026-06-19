@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} relative min-h-screen overflow-x-hidden pt-20 antialiased md:pt-28`}
+        className={`${geist.variable} ${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} relative min-h-screen overflow-x-hidden pb-36 pt-6 antialiased md:pb-0 md:pt-28`}
       >
         <Providers>
           <ThemeContextProvider>
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Footer />
 
               <Toaster position="top-right" />
-              <div className="fixed bottom-4 right-4 z-[998] flex gap-2 sm:bottom-5 sm:right-5 sm:gap-3">
+              <div className="fixed bottom-4 right-4 z-[998] hidden gap-2 md:flex sm:bottom-5 sm:right-5 sm:gap-3">
                 <LanguageSwitch />
                 <ThemeSwitch />
               </div>
