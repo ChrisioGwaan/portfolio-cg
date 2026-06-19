@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
@@ -12,11 +12,9 @@ import '../lib/i18n';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeMarker, setActiveMarker] = useState({ left: 0, width: 0, opacity: 0 });
   const menuRef = useRef<HTMLDivElement>(null);
-  const desktopListRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -32,43 +30,28 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  useLayoutEffect(() => {
-    const updateActiveMarker = () => {
-      const activeLink = desktopListRef.current?.querySelector<HTMLElement>(
-        `[data-section-id="${activeSection}"]`
-      );
-
-      if (!activeLink || !desktopListRef.current) {
-        setActiveMarker(marker => ({ ...marker, opacity: 0 }));
-        return;
-      }
-
-      const linkRect = activeLink.getBoundingClientRect();
-      const listRect = desktopListRef.current.getBoundingClientRect();
-
-      setActiveMarker({
-        left: linkRect.left - listRect.left + desktopListRef.current.scrollLeft,
-        width: linkRect.width,
-        opacity: 1,
-      });
-    };
-
-    const animationFrame = window.requestAnimationFrame(updateActiveMarker);
-    window.addEventListener('resize', updateActiveMarker);
-
-    return () => {
-      window.cancelAnimationFrame(animationFrame);
-      window.removeEventListener('resize', updateActiveMarker);
-    };
-  }, [activeSection, i18n.language]);
-
   return (
     <>
       {/* Mobile */}
-      <div ref={menuRef} className="fixed left-4 right-4 top-4 z-[999] md:hidden">
+      <div
+        ref={menuRef}
+        className="fixed left-4 right-4 top-4 z-[999] flex items-center justify-between md:hidden"
+      >
+        <Link
+          href="#home"
+          className="rounded-full border border-black/10 bg-white/85 px-4 py-2 font-display text-sm font-semibold text-ink shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-white/10 dark:text-white"
+          onClick={() => {
+            setActiveSection('home');
+            setTimeOfLastClick(Date.now());
+            setMenuOpen(false);
+          }}
+        >
+          CG
+        </Link>
+
         <button
           onClick={() => setMenuOpen(prev => !prev)}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-md transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] focus:ring-offset-2 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+          className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/85 text-xl text-ink shadow-panel backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#43f0b3] focus:outline-none focus:ring-2 focus:ring-[#43f0b3] focus:ring-offset-2 dark:border-white/10 dark:bg-white/10 dark:text-white"
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={menuOpen}
         >
@@ -82,7 +65,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="mt-3 w-full rounded-2xl border border-black/5 bg-white/95 p-2 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-gray-900/95"
+              className="absolute left-0 right-0 top-14 rounded-2xl border border-black/10 bg-white/95 p-2 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1820]/95"
             >
               <div className="grid grid-cols-2 gap-2">
                 {links.map(link => (
@@ -90,10 +73,10 @@ export default function Header() {
                     key={link.hash}
                     href={link.hash}
                     className={clsx(
-                      'rounded-xl px-3 py-3 text-center text-sm font-medium transition',
+                      'rounded-xl px-3 py-3 text-center text-sm font-semibold transition',
                       activeSection === link.id
-                        ? 'bg-green-200 dark:bg-gray-700 text-gray-900 dark:text-white'
-                        : 'text-gray-600 hover:text-[#8cfa9e] dark:hover:text-[#8cfa9e]'
+                        ? 'bg-ink text-white dark:bg-[#43f0b3] dark:text-ink'
+                        : 'text-gray-600 hover:bg-black/5 hover:text-ink dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white'
                     )}
                     onClick={() => {
                       setActiveSection(link.id);
@@ -111,30 +94,31 @@ export default function Header() {
       </div>
 
       {/* Desktop */}
-      <header className="z-[999] relative hidden md:block">
-        <motion.div
-          className="fixed left-1/2 top-6 h-[3.25rem] w-[calc(100%-2rem)] max-w-[56rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-          initial={{ y: -100, x: '-50%', opacity: 0 }}
-          animate={{ y: 0, x: '-50%', opacity: 1 }}
-        ></motion.div>
-
-        <nav className="fixed left-1/2 top-[1.7rem] flex h-[initial] w-[calc(100%-2rem)] max-w-[56rem] -translate-x-1/2 overflow-x-auto py-0">
-          <ul
-            ref={desktopListRef}
-            className="relative mx-auto flex min-w-max flex-nowrap items-center justify-center gap-2 text-[0.9rem] font-medium text-gray-500 lg:gap-4"
+      <header className="fixed left-1/2 top-5 z-[999] hidden w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 md:block">
+        <motion.nav
+          className="grid h-14 grid-cols-[auto_1fr] items-center gap-4 rounded-full border border-black/10 bg-white/80 px-3 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-[#071016]/78 dark:shadow-panel-dark"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Link
+            href="#home"
+            className="flex h-10 items-center gap-2 rounded-full border border-black/10 bg-ink px-4 font-display text-sm font-semibold text-white transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white dark:text-ink"
+            onClick={() => {
+              setActiveSection('home');
+              setTimeOfLastClick(Date.now());
+            }}
           >
-            <motion.span
-              className="pointer-events-none absolute inset-y-0 rounded-full bg-green-100 dark:bg-gray-800"
-              animate={activeMarker}
-              transition={{
-                type: 'spring',
-                stiffness: 360,
-                damping: 34,
-              }}
-            />
+            <span className="font-mono text-[0.7rem] text-[#43f0b3] dark:text-[#0f766e]">
+              01
+            </span>
+            CG
+          </Link>
+
+          <ul className="relative flex min-w-0 flex-nowrap items-center justify-end gap-1 overflow-x-auto text-[0.83rem] font-semibold text-gray-500 lg:gap-2">
             {links.map(link => (
               <motion.li
-                className="relative z-10 h-3/4 flex items-center justify-center"
+                className="relative z-10 flex h-full items-center justify-center"
                 key={link.hash}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -142,9 +126,11 @@ export default function Header() {
                 <Link
                   data-section-id={link.id}
                   className={clsx(
-                    'flex w-full items-center justify-center px-2.5 py-3 hover:text-[#8cfa9e] transition dark:text-gray-300 dark:hover:text-[#8cfa9e]',
+                    'flex w-full items-center justify-center whitespace-nowrap rounded-full px-3 py-3 transition hover:bg-black/5 hover:text-ink dark:text-white/65 dark:hover:bg-white/10 dark:hover:text-white lg:px-4',
                     {
-                      'text-gray-950 dark:text-gray-200': activeSection === link.id,
+                      'bg-ink text-white hover:bg-ink hover:text-white dark:bg-white dark:text-ink dark:hover:bg-white dark:hover:text-ink':
+                        activeSection === link.id,
+                      'text-gray-500': activeSection !== link.id,
                     }
                   )}
                   href={link.hash}
@@ -158,7 +144,7 @@ export default function Header() {
               </motion.li>
             ))}
           </ul>
-        </nav>
+        </motion.nav>
       </header>
     </>
   );
