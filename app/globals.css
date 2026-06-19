@@ -3,18 +3,59 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: rgba(10, 21, 28, 0.13);
+  --surface: #f6f7f1;
+  --ink: #0a151c;
+  --muted: #5a6870;
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-strong: rgba(255, 255, 255, 0.94);
   overflow-x: hidden;
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(245, 247, 239, 0.14);
+  --surface: #071016;
+  --ink: #f5f7ef;
+  --muted: rgba(245, 247, 239, 0.68);
+  --panel: rgba(12, 26, 34, 0.76);
+  --panel-strong: rgba(12, 26, 34, 0.94);
 }
 
 body {
   font-family: var(--font-geist), var(--font-inter), system-ui, sans-serif;
+  color: var(--ink);
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(var(--line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-color) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(67, 240, 179, 0.1), transparent 34%, rgba(88, 215, 255, 0.11) 68%, transparent);
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    center;
+  background-size:
+    38px 38px,
+    38px 38px,
+    100% 100%;
+  min-height: 100vh;
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+::selection {
+  background: rgba(67, 240, 179, 0.45);
+  color: #071016;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
