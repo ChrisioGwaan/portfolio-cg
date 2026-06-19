@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LuCalendarDays, LuChevronLeft, LuChevronRight, LuExternalLink, LuX } from 'react-icons/lu';
+import { Button, Chip } from '@heroui/react';
 
 const imageTransition = {
   duration: 0.32,
@@ -49,9 +50,9 @@ export default function Project({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto flex w-full max-w-5xl flex-col items-stretch gap-5 px-0 py-5 sm:px-2 md:flex-row md:items-start md:gap-6"
+        className="mx-auto my-6 grid w-full max-w-6xl gap-5 rounded-[8px] border border-black/10 bg-white/76 p-3 shadow-panel backdrop-blur transition hover:-translate-y-1 hover:border-[#43f0b3]/70 dark:border-white/10 dark:bg-white/[0.05] dark:shadow-panel-dark md:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.85fr)] md:gap-6 md:p-4"
       >
-        <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg md:w-1/2 lg:w-3/5">
+        <div className="relative aspect-video w-full overflow-hidden rounded-[6px] border border-black/10 bg-ink shadow-lg dark:border-white/10">
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={imageIndex}
@@ -68,7 +69,7 @@ export default function Project({
                 fill
                 loading={imageIndex === 0 ? 'eager' : 'lazy'}
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 58vw"
               />
             </motion.div>
           </AnimatePresence>
@@ -78,7 +79,7 @@ export default function Project({
               {hasPrev && (
                 <button
                   onClick={() => paginate(-1)}
-                  className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-gray-800 shadow-md backdrop-blur transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] dark:bg-gray-950/75 dark:text-white dark:hover:bg-gray-900"
+                  className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-ink shadow-md backdrop-blur transition hover:-translate-x-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#43f0b3] dark:bg-[#071016]/75 dark:text-white dark:hover:bg-[#071016]"
                   aria-label="Previous project screenshot"
                 >
                   <LuChevronLeft size={20} />
@@ -87,7 +88,7 @@ export default function Project({
               {hasNext && (
                 <button
                   onClick={() => paginate(1)}
-                  className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-gray-800 shadow-md backdrop-blur transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#8cfa9e] dark:bg-gray-950/75 dark:text-white dark:hover:bg-gray-900"
+                  className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-ink shadow-md backdrop-blur transition hover:translate-x-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#43f0b3] dark:bg-[#071016]/75 dark:text-white dark:hover:bg-[#071016]"
                   aria-label="Next project screenshot"
                 >
                   <LuChevronRight size={20} />
@@ -100,7 +101,9 @@ export default function Project({
                     key={index}
                     onClick={() => setImageIndex(index)}
                     className={`h-1.5 rounded-full transition-all ${
-                      index === imageIndex ? 'w-5 bg-white' : 'w-1.5 bg-white/55 hover:bg-white/80'
+                      index === imageIndex
+                        ? 'w-5 bg-[#43f0b3]'
+                        : 'w-1.5 bg-white/55 hover:bg-white/80'
                     }`}
                     aria-label={`Show project screenshot ${index + 1}`}
                   />
@@ -110,44 +113,58 @@ export default function Project({
           )}
         </div>
 
-        <div className="w-full min-w-0 flex flex-col gap-3 md:w-1/2 lg:w-2/5">
+        <div className="flex w-full min-w-0 flex-col gap-4 p-1 md:p-2">
           <div>
-            <h3 className="text-xl font-bold leading-tight sm:text-2xl">{title}</h3>
-            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
-              <span className="inline-flex items-center gap-1.5">
+            <div className="mb-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[#0f766e] dark:text-[#43f0b3]">
+              Case study
+            </div>
+            <h3 className="font-display text-xl font-semibold leading-tight text-ink dark:text-white sm:text-2xl">
+              {title}
+            </h3>
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--muted)]">
+              <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em]">
                 <LuCalendarDays className="h-4 w-4" />
                 {date}
               </span>
-              {association && <span>{association}</span>}
+              {association && <span className="font-medium">{association}</span>}
             </div>
           </div>
 
           {projectUrl && (
-            <a
+            <Button
+              as="a"
               href={projectUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:border-[#8cfa9e] hover:text-gray-950 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-white"
+              className="w-fit rounded-full border border-black/10 bg-white px-4 font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-[#43f0b3] data-[hover=true]:opacity-100 dark:border-white/10 dark:bg-white/10 dark:text-white"
+              radius="full"
+              size="sm"
             >
               Show project
               <LuExternalLink className="h-4 w-4" />
-            </a>
+            </Button>
           )}
 
-          <div className="rounded-lg border border-gray-200 bg-gray-50/80 p-3 dark:border-gray-800 dark:bg-gray-900/70">
-            <div className="mb-2 text-xs font-semibold uppercase text-gray-400">Tech stack</div>
+          <div>
+            <div className="mb-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
+              Tech stack
+            </div>
             <ul className="flex flex-wrap gap-2">
               {skills.map(skill => (
-                <li
-                  key={skill}
-                  className="rounded-md border border-gray-200 bg-white px-2.5 py-1 text-xs font-medium text-gray-600 transition-colors hover:border-gray-300 hover:text-gray-950 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-white sm:text-sm"
-                >
-                  {skill}
+                <li key={skill}>
+                  <Chip
+                    className="border border-black/10 bg-white/72 px-1 font-medium text-[var(--muted)] dark:border-white/10 dark:bg-white/10 dark:text-white/80"
+                    radius="sm"
+                    size="sm"
+                    variant="flat"
+                  >
+                    {skill}
+                  </Chip>
                 </li>
               ))}
             </ul>
           </div>
-          <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 sm:text-base">
+          <p className="text-sm leading-7 text-[var(--muted)] sm:text-base">
             {description}
           </p>
         </div>
@@ -168,7 +185,8 @@ export default function Project({
                   e.stopPropagation();
                   paginate(-1);
                 }}
-                className="absolute left-2 top-1/2 z-10 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 shadow focus:outline-none sm:left-4"
+                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-ink shadow transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#43f0b3] sm:left-4"
+                aria-label="Previous large project screenshot"
               >
                 <LuChevronLeft size={24} />
               </button>
@@ -179,7 +197,8 @@ export default function Project({
                   e.stopPropagation();
                   paginate(1);
                 }}
-                className="absolute right-2 top-1/2 z-10 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 shadow focus:outline-none sm:right-4"
+                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-ink shadow transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#43f0b3] sm:right-4"
+                aria-label="Next large project screenshot"
               >
                 <LuChevronRight size={24} />
               </button>
@@ -205,21 +224,14 @@ export default function Project({
                     alt={`${title} large preview ${imageIndex + 1}`}
                     width={1200}
                     height={800}
-                    className="max-h-[90vh] w-auto rounded-lg object-contain"
+                    className="max-h-[90vh] w-auto rounded-[8px] object-contain"
                   />
                 </motion.div>
               </AnimatePresence>
               <button
                 onClick={() => setPreviewOpen(false)}
-                className="
-                  absolute top-2 right-2 
-                  w-8 h-8 flex items-center justify-center 
-                  bg-black bg-opacity-40 
-                  text-white text-xl rounded-full 
-                  focus:outline-none 
-                  hover:bg-white hover:bg-opacity-80 hover:text-black 
-                  transition-colors duration-200
-                "
+                className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-xl text-white transition hover:bg-white hover:text-ink focus:outline-none focus:ring-2 focus:ring-[#43f0b3]"
+                aria-label="Close project preview"
               >
                 <LuX size={24} />
               </button>
