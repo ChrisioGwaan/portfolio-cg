@@ -39,7 +39,7 @@ export default function LanguageSwitch() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="bg-[#8cfa9e] w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-[#8cfa9e] border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+        className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-[#43f0b3] text-ink shadow-panel backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#58d7ff] active:translate-y-0 dark:border-white/10 dark:bg-[#43f0b3] dark:text-ink"
         title="Select Language"
       >
         <LuLanguages className="h-5 w-5" />
@@ -48,7 +48,7 @@ export default function LanguageSwitch() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute bottom-14 right-0 w-36 overflow-hidden rounded-xl border border-white border-opacity-20 bg-white shadow-xl dark:bg-gray-800"
+            className="absolute bottom-14 right-0 w-36 overflow-hidden rounded-[8px] border border-black/10 bg-white/95 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-[#071016]/95"
             initial={{ opacity: 0, y: 15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.95 }}
@@ -58,7 +58,7 @@ export default function LanguageSwitch() {
               <button
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
-                className={`block w-full truncate px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                className={`block w-full truncate px-4 py-2 text-left text-sm transition hover:bg-black/5 dark:hover:bg-white/10 ${
                   i18n.language === lang.code ? 'font-bold' : ''
                 }`}
                 title={lang.label}
