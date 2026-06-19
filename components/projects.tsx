@@ -26,6 +26,9 @@ export default function Projects() {
       viewport={{ once: true, amount: 0.12 }}
     >
       <SectionHeading>{t('Projects')}</SectionHeading>
+      <div className="mx-auto mb-7 max-w-3xl text-center text-sm leading-7 text-[var(--muted)] sm:text-base">
+        Selected work across AI automation, cloud workflows, enterprise systems, and older fundamentals.
+      </div>
       <div>
         {sortedProjects.map(project => (
           <React.Fragment key={project.title}>
