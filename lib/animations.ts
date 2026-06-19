@@ -1,3 +1,5 @@
+import type { Variants } from 'framer-motion';
+
 export const sectionReveal = {
   hidden: {
     opacity: 0,
@@ -11,7 +13,7 @@ export const sectionReveal = {
       ease: [0.22, 1, 0.36, 1],
     },
   },
-};
+} satisfies Variants;
 
 export const itemReveal = {
   hidden: {
@@ -27,4 +29,4 @@ export const itemReveal = {
       ease: [0.22, 1, 0.36, 1],
     },
   }),
-};
+} satisfies Variants;
