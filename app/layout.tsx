@@ -10,6 +10,7 @@ import { Analytics } from '@vercel/analytics/next';
 import LanguageSwitch from '@/components/language-switch';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from './providers';
+import SiteBackground from '@/components/site-background';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
+              <SiteBackground />
               <Header />
               {children}
               <Footer />

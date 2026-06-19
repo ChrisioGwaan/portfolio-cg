@@ -212,12 +212,12 @@ export const skillCategoriesData = [
     id: 'skillCategory1',
     icon: React.createElement(LuBrain),
     skills: [
-      'Artificial Intelligence (AI)',
       'Copilot Studio',
       'Azure AI Foundry',
-      'RAG',
-      'Document Understanding',
-      'Prompt Engineering',
+      'RAG pipelines',
+      'Content Understanding',
+      'Document extraction',
+      'Prompt evaluation',
     ],
   },
   {
@@ -235,7 +235,7 @@ export const skillCategoriesData = [
   {
     id: 'skillCategory3',
     icon: React.createElement(LuCode2),
-    skills: ['TypeScript', 'React.js', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Startup Development'],
+    skills: ['TypeScript', 'React.js', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Product iteration'],
   },
   {
     id: 'skillCategory4',
@@ -245,6 +245,6 @@ export const skillCategoriesData = [
   {
     id: 'skillCategory5',
     icon: React.createElement(LuWorkflow),
-    skills: ['Docker', 'Jenkins', 'REST APIs', 'CI/CD', 'Google Lighthouse', 'Code Review'],
+    skills: ['Docker', 'Jenkins', 'REST APIs', 'CI/CD', 'Lighthouse audits', 'Code review'],
   },
 ] as const;

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LuMail, LuArrowDown, LuGithub, LuLinkedin, LuX } from 'react-icons/lu';
 import { TbBrandWechat } from 'react-icons/tb';
-import { Button, Chip } from '@heroui/react';
+import { Button } from '@heroui/react';
 import { useSectionInView } from '@/lib/hooks';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
@@ -48,8 +48,6 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({ href, title, label 
   </Button>
 );
 
-const focusAreas = ['AI systems', 'Cloud workflows', 'Full-stack product', 'Reviewable code'];
-
 export default function Intro() {
   const { t } = useTranslation();
   const { ref } = useSectionInView('home');
@@ -65,19 +63,6 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="mb-5 flex flex-wrap justify-center gap-2 md:justify-start">
-              {focusAreas.map(area => (
-                <Chip
-                  key={area}
-                  className="border border-black/10 bg-white/70 px-1.5 font-mono text-[0.62rem] uppercase tracking-[0.1em] text-ink backdrop-blur dark:border-white/10 dark:bg-white/10 dark:text-white/80 sm:px-2 sm:text-[0.7rem]"
-                  radius="sm"
-                  variant="flat"
-                >
-                  {area}
-                </Chip>
-              ))}
-            </div>
-
             <h1 className="text-balance break-words font-display text-4xl font-semibold leading-[0.98] text-ink dark:text-white sm:text-6xl md:text-7xl">
               {t('homeTitle')}
             </h1>
@@ -129,10 +114,9 @@ export default function Intro() {
               </div>
             </div>
 
-            <div className="mt-10 grid gap-3 text-left sm:grid-cols-3">
+            <div className="mt-10 grid gap-3 text-left sm:max-w-lg sm:grid-cols-2">
               {[
                 ['02+', 'years professional engineering'],
-                ['AI', 'agents, RAG and document workflows'],
                 ['AU', 'Melbourne-based builder'],
               ].map(([value, label]) => (
                 <div

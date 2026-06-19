@@ -5,7 +5,7 @@
   "Home": "Home",
   "home": "Home",
   "homeTitle": "Chrisio Gwaan",
-  "homeCareerTitle": "Software Engineer",
+  "homeCareerTitle": "Software Engineer / AI Engineer",
   "homeSubTitle1": "My legal name is Weixi Guan. I’m from Canton (Guangzhou), China, and I bring 2+ years of professional experience in software engineering.",
   "homeSubTitle2": "",
   "homeSubTitle3": "",
@@ -98,26 +98,26 @@
 
   "Skills": "Skills",
   "skills": "Skills",
-  "skillsIntro": "A practical snapshot of the tools and areas I use to build AI-assisted products, cloud workflows, and maintainable software systems.",
+  "skillsIntro": "The tools I reach for most often, grouped by how I actually use them: shaping AI workflows, building product surfaces, and keeping delivery reviewable.",
   "skillCategory1": {
     "title": "AI & Automation",
-    "description": "Applied AI, copilots, RAG, and document understanding workflows."
+    "description": "Copilots, retrieval, and document extraction patterns I have used on enterprise projects."
   },
   "skillCategory2": {
     "title": "Cloud & Microsoft Platform",
-    "description": "Azure and Power Platform tools used for enterprise automation and data flows."
+    "description": "Azure and Power Platform pieces for secure automation, storage, and operational data."
   },
   "skillCategory3": {
     "title": "Product & Frontend",
-    "description": "Interfaces, product iteration, and user-facing web development."
+    "description": "Interfaces, product iteration, and the details that make user-facing software feel clear."
   },
   "skillCategory4": {
     "title": "Backend & Data",
-    "description": "APIs, services, databases, and application logic across product systems."
+    "description": "API layers, service logic, databases, and the parts of the system users never see."
   },
   "skillCategory5": {
     "title": "Engineering Workflow",
-    "description": "Delivery habits that keep projects reviewable, testable, and easier to improve."
+    "description": "Delivery habits for making changes easier to review, test, and improve."
   },
 
   "Photography": "Photography",

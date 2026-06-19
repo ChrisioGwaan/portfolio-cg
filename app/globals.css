@@ -9,6 +9,10 @@ html {
   --muted: #5a6870;
   --panel: rgba(255, 255, 255, 0.78);
   --panel-strong: rgba(255, 255, 255, 0.94);
+  --signal: #43f0b3;
+  --cyanprint: #58d7ff;
+  --brass: #e3b253;
+  --rosewire: #ff5c8a;
   overflow-x: hidden;
 }
 
@@ -25,10 +29,50 @@ body {
   font-family: var(--font-geist), var(--font-inter), system-ui, sans-serif;
   color: var(--ink);
   background-color: var(--surface);
+  min-height: 100vh;
+}
+
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  contain: paint;
+  isolation: isolate;
+  pointer-events: none;
+  background:
+    linear-gradient(118deg, rgba(67, 240, 179, 0.1), transparent 26%),
+    linear-gradient(232deg, rgba(88, 215, 255, 0.13), transparent 28%),
+    var(--surface);
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.site-background__grid,
+.site-background__signal,
+.site-background__ribbon,
+.site-background__trace,
+.site-background__node {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.site-background__grid {
+  animation: schematic-grid-drift 46s linear infinite;
   background-image:
     linear-gradient(var(--line-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--line-color) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(67, 240, 179, 0.1), transparent 34%, rgba(88, 215, 255, 0.11) 68%, transparent);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 108px,
+      rgba(67, 240, 179, 0.08) 108px 109px,
+      transparent 109px 216px
+    );
   background-position:
     -1px -1px,
     -1px -1px,
@@ -36,8 +80,246 @@ body {
   background-size:
     38px 38px,
     38px 38px,
-    100% 100%;
-  min-height: 100vh;
+    216px 216px;
+  mask-image: linear-gradient(to bottom, black 0%, black 76%, transparent 100%);
+}
+
+.site-background__signal {
+  animation: signal-scan 24s ease-in-out infinite alternate;
+  inset: -10% -8%;
+  background:
+    conic-gradient(
+      from 135deg at 20% 18%,
+      transparent 0deg,
+      rgba(67, 240, 179, 0.12) 46deg,
+      transparent 92deg,
+      transparent 360deg
+    ),
+    conic-gradient(
+      from 310deg at 82% 26%,
+      transparent 0deg,
+      rgba(255, 92, 138, 0.09) 34deg,
+      rgba(88, 215, 255, 0.12) 78deg,
+      transparent 120deg,
+      transparent 360deg
+  );
+  filter: saturate(1.15);
+  will-change: transform, opacity;
+}
+
+.site-background__ribbon {
+  height: 15rem;
+  left: -12vw;
+  right: -12vw;
+  border-block: 1px solid rgba(10, 21, 28, 0.08);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(10, 21, 28, 0.06) 0 1px,
+      transparent 1px 28px
+    ),
+    linear-gradient(90deg, transparent, rgba(67, 240, 179, 0.14), rgba(88, 215, 255, 0.12), transparent);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.site-background__ribbon--one {
+  animation: ribbon-one-drift 19s ease-in-out infinite alternate;
+  top: 8rem;
+  transform: skewY(-7deg);
+}
+
+.site-background__ribbon--two {
+  animation: ribbon-two-drift 23s ease-in-out infinite alternate;
+  bottom: 9rem;
+  transform: skewY(8deg);
+  opacity: 0.55;
+}
+
+.site-background__trace {
+  animation: trace-breathe 15s ease-in-out infinite alternate;
+  inset: auto auto auto auto;
+  width: min(34vw, 28rem);
+  height: min(34vw, 28rem);
+  border: 1px solid rgba(10, 21, 28, 0.12);
+  clip-path: polygon(0 0, 100% 0, 100% 18%, 18% 18%, 18% 100%, 0 100%);
+  will-change: opacity;
+}
+
+.site-background__trace--one {
+  right: 7vw;
+  top: 10rem;
+  border-color: rgba(67, 240, 179, 0.26);
+}
+
+.site-background__trace--two {
+  left: 5vw;
+  bottom: 8rem;
+  border-color: rgba(88, 215, 255, 0.22);
+  transform: rotate(180deg);
+}
+
+.site-background__trace--three {
+  right: 18vw;
+  bottom: 26rem;
+  width: 12rem;
+  height: 12rem;
+  border-color: rgba(227, 178, 83, 0.22);
+  transform: rotate(90deg);
+}
+
+.site-background__node {
+  animation: node-pulse 5.2s ease-in-out infinite;
+  inset: auto;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 1px solid var(--signal);
+  background: color-mix(in srgb, var(--surface) 74%, var(--signal));
+  box-shadow:
+    0 0 0 6px rgba(67, 240, 179, 0.08),
+    0 0 24px rgba(67, 240, 179, 0.24);
+  will-change: transform, opacity;
+}
+
+.site-background__node::before,
+.site-background__node::after {
+  animation: trace-line-pulse 5.2s ease-in-out infinite;
+  position: absolute;
+  content: '';
+  background: currentColor;
+  color: var(--signal);
+  opacity: 0.44;
+}
+
+.site-background__node::before {
+  top: 50%;
+  left: 100%;
+  width: clamp(4rem, 13vw, 13rem);
+  height: 1px;
+}
+
+.site-background__node::after {
+  left: 50%;
+  bottom: 100%;
+  width: 1px;
+  height: clamp(3rem, 12vw, 10rem);
+}
+
+.site-background__node--one {
+  left: 11vw;
+  top: 22rem;
+}
+
+.site-background__node--two {
+  animation-delay: -1.7s;
+  right: 14vw;
+  top: 35rem;
+  border-color: var(--cyanprint);
+  background: color-mix(in srgb, var(--surface) 74%, var(--cyanprint));
+}
+
+.site-background__node--two::before,
+.site-background__node--two::after {
+  color: var(--cyanprint);
+}
+
+.site-background__node--three {
+  animation-delay: -3.1s;
+  left: 47vw;
+  bottom: 12rem;
+  border-color: var(--brass);
+  background: color-mix(in srgb, var(--surface) 72%, var(--brass));
+}
+
+.site-background__node--three::before,
+.site-background__node--three::after {
+  color: var(--brass);
+}
+
+@keyframes schematic-grid-drift {
+  0% {
+    background-position:
+      -1px -1px,
+      -1px -1px,
+      center;
+  }
+
+  100% {
+    background-position:
+      37px 37px,
+      37px 37px,
+      216px center;
+  }
+}
+
+@keyframes signal-scan {
+  0% {
+    opacity: 0.72;
+    transform: translate3d(-1.4rem, -0.8rem, 0) rotate(-0.35deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(1.4rem, 0.8rem, 0) rotate(0.35deg);
+  }
+}
+
+@keyframes ribbon-one-drift {
+  0% {
+    opacity: 0.72;
+    transform: skewY(-7deg) translate3d(-1.6rem, 0, 0);
+  }
+
+  100% {
+    opacity: 0.95;
+    transform: skewY(-5.5deg) translate3d(1.8rem, 0.7rem, 0);
+  }
+}
+
+@keyframes ribbon-two-drift {
+  0% {
+    opacity: 0.38;
+    transform: skewY(8deg) translate3d(1.3rem, 0, 0);
+  }
+
+  100% {
+    opacity: 0.62;
+    transform: skewY(6.5deg) translate3d(-1.6rem, -0.7rem, 0);
+  }
+}
+
+@keyframes trace-breathe {
+  0% {
+    opacity: 0.42;
+  }
+
+  100% {
+    opacity: 0.86;
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.84;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.24);
+  }
+}
+
+@keyframes trace-line-pulse {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+
+  50% {
+    opacity: 0.62;
+  }
 }
 
 .borderBlack {
@@ -57,5 +339,12 @@ body {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .site-background,
+  .site-background *,
+  .site-background *::before,
+  .site-background *::after {
+    animation: none !important;
   }
 }
