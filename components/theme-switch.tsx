@@ -5,15 +5,16 @@ import React from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
 export default function ThemeSwitch() {
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
     <button
-      className="bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-[#8cfa9e] border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/85 text-ink shadow-panel backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#43f0b3] active:translate-y-0 dark:border-white/10 dark:bg-[#071016]/85 dark:text-white"
       onClick={toggleTheme}
       title="Toggle Theme"
     >
-      {theme === 'light' ? <BsSun /> : <BsMoon />}
+      <BsSun className="block dark:hidden" />
+      <BsMoon className="hidden dark:block" />
     </button>
   );
 }
