@@ -26,9 +26,9 @@
 
   "About": "关于",
   "about": "关于",
-  "aboutTitle": "个人语录",
-  "aboutIntro": "平时主要做全栈系统和 AI 相关的工具，也会构建 AI agent、打磨它们的能力和性能。比起在 slide 上好看，我更在意东西有没有人真的在用。",
-  "aboutPersonalNote": "下了班通常能在单车或机车上找到我，要么在折腾 side project，要么在试最近看上眼的新技术。",
+  "aboutTitle": "关于我",
+  "aboutIntro": "我是一名软件工程师，比较喜欢处理产品里最混乱的那一段：把业务流程、数据和用户界面整理成一个真正可用的系统。",
+  "aboutPersonalNote": "最近的工作主要围绕 Microsoft 云、自动化和全栈产品工程。比起堆功能，我更在意清晰：用户知道怎么走，系统边界说得通，代码也能承受下一次修改。",
 
   "Education": "Education",
   "education": "Education",

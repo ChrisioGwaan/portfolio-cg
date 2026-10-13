@@ -27,8 +27,8 @@
   "About": "About",
   "about": "About",
   "aboutTitle": "About Me",
-  "aboutIntro": "I work mostly on full-stack systems and AI-adjacent tooling, building AI agents and improving their capability and performance. I care more about software people actually use than software that just looks good in a slide.",
-  "aboutPersonalNote": "Outside work, I’m usually on a bicycle or motorbike, tinkering with a side project, or trying out whatever new tech caught my eye that week.",
+  "aboutIntro": "I’m a software engineer who likes the messy middle of products: where business workflows, data, and user-facing screens need to become one usable system.",
+  "aboutPersonalNote": "Recently my work has been around Microsoft cloud, automation, and full-stack product engineering. The part I care about most is clarity: simple paths for users, sensible system boundaries, and code that can survive the next change.",
 
   "Education": "Education",
   "education": "Education",
